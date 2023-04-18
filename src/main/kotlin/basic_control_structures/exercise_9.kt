@@ -6,7 +6,7 @@ fun moneyConversionRealToDollar() {
     val amount: Double = readln().toDouble()
     val _amount = String.format("%.2f", amount)
 
-    print("Cotação: R$")
+    print("Exchange rate: R$")
     val price: Double = readln().toDouble()
     val _price = String.format("%.2f", price)
 
