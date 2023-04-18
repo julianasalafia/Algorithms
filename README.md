@@ -278,3 +278,31 @@ Ex: Enter a value: 35
 
 **70)** ***[CHALLENGE]*** Make a program that shows the first 10 elements of the Fibonacci Sequence:
 *1 1 2 3 5 8 13 21...*
+
+## 08 - VECTORS
+
+**71)** Create a program that automatically fills a numeric vector with 8 positions as follows:
+
+|999|999|999|999|999|999|999|999|
+|---|--|--|--|--|--|--|--|
+|0|1|2|3|4|5|6|7|
+
+**72)** Create a program that automatically fills (using logic, not just assigning directly) a numeric vector with 10 positions as follows:
+|5|10|15|20|25|30|35|40|45|50|
+|---|--|--|--|--|--|--|--|--|--|
+|0|1|2|3|4|5|6|7|8|9|
+
+**73)** Create a program that automatically fills (using logic, not just assigning directly) a numeric vector with 10 positions as follows:
+|9|8|7|6|5|4|3|2|1|0|
+|---|--|--|--|--|--|--|--|--|--|
+|0|1|2|3|4|5|6|7|8|9|
+
+**74)** Create a program that automatically fills (using logic, not just assigning directly) a numeric vector with 10 positions as follows:
+|5|3|5|3|5|3|5|3|5|3|
+|---|--|--|--|--|--|--|--|--|--|
+|0|1|2|3|4|5|6|7|8|9|
+
+**75)** Create a program that automatically fills (using logic, not just assigning directly) a numeric vector with 15 positions with the first elements of the Fibonacci sequence:
+|1|1|2|3|5|8|13|21|34|55|89|144|233|377|610|987|
+|---|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|
