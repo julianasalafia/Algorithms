@@ -6,7 +6,7 @@ fun promotionalPrice() {
     val price = readln().toDouble()
     val _price = String.format("%.2f", price)
 
-    print("desconto(%): ")
+    print("discount(%): ")
     val discountPercentage = readln().toDouble()
 
     val discount = discountPercentage * price / 100

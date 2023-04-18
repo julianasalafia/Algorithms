@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_11.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_12.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_13.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_14.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_15.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_16.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_12.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_12.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_16.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_16.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

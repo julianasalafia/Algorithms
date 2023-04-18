@@ -7,7 +7,7 @@ package basic_control_structures
 fun smokersLifetime() {
     val timeLostByCigar = 10 / 60.0
 
-    print("Cigarros fumados por dia: ")
+    print("Cigarettes smoked per day: ")
     val smokedPerDay = readln().toInt()
 
     print("Years smoking: ")
