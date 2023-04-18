@@ -125,8 +125,27 @@ less than the sum of the other two.
   - above 40: Morbid obesity
 *Note: The BMI is calculated by the expression weight/height² (weight divided by the square of the height)*
 
-**35)** A car rental company needs to charge for its services. The rental of a car costs R$90 per day for a popular car and R$150 per day for a luxury car. In addition, the customer pays for the distance traveled. Create a program that reads the type of rented car (popular or luxury), how many rental days, and how many kilometers were traveled. At the end, show the price to be paid according to the following table:
-  - Popular cars (R$90 rental per day)
-  - Up to 100km traveled: R$0.20 per km
-  - Over 100km traveled: R$0.10 per km
-  - Luxury cars (R$150 rental per
+
+**35)** A car rental company needs to charge for its services. Renting a popular car costs R$90 per day, and renting a luxury car costs R$150 per day. In addition, the customer pays for the distance traveled in kilometers. Write a program that reads the type of rented car (popular or luxury), the number of rental days, and the distance traveled in kilometers. At the end, show the price to be paid according to the following table:
+- Popular cars (R$90 per day)
+ - Up to 100Km traveled: R$0.20 per Km
+ - Above 100Km traveled: R$0.10 per Km
+- Luxury cars (R$150 per day)
+ - Up to 200Km traveled: R$0.30 per Km
+ - Above 200Km traveled: R$0.25 per Km
+
+**36)** A healthy lifestyle program wants to reward physical activity with points that can be exchanged for money. The system works as follows:
+ - Each hour of physical activity in the month is worth points
+ - Up to 10 hours of activity in the month: earns 2 points per hour
+ - From 10 to 20 hours of activity in the month: earns 5 points per hour
+ - Above 20 hours of activity in the month: earns 10 points per hour
+ - For every point earned, the customer earns R$0.05 (5 cents)
+Write a program that reads how many hours of physical activity a person had in a month, calculates and shows how many points they earned and how much money they were able to earn.
+
+**37)** A company needs to adjust the salaries of its employees, giving them a raise based on some factors. Write a program that reads the employee's current salary, gender, and how many years they have been working for the company. At the end, show their new salary, based on the following table:
+
+| Women | Men	 |
+|--|--|
+| Less than 15 years in the company: +5% | Less than 20 years in the company: +3%  |
+| From 15 to 20 years in the company: +12% | From 20 to 30 years in the company: +13%  |
+| More than 20 years in the company: +23% | More than 30 years in the company: +25%  |
