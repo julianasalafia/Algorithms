@@ -82,3 +82,51 @@ longer trips.
 their lengths and say if it is possible to form a triangle with these lines. 
 Mathematically, for three segments to form a triangle, the length of each side must be 
 less than the sum of the other two.
+
+
+## 03 - COMPOUND CONDITIONS
+
+**26)** Write an algorithm that reads two integers and compares them, showing on the screen one of the messages below:
+  - The first value is greater
+  - The second value is greater
+  - There is no greater value, they are equal
+  
+**27)** Create a program that reads two grades of a student and calculates his/her average, showing a message at the end, according to the reached average:
+  - Average up to 4.9: FAILED
+  - Average between 5.0 and 6.9: RECOVERY
+  - Average 7.0 or higher: APPROVED
+  
+**28)** Make a program that reads the width and length of a rectangular terrain, calculating and showing its area in m². The program should also show the classification of this land, according to the list below:
+  - Below 100m² = POPULAR LAND
+  - Between 100m² and 500m² = MASTER LAND
+  - Above 500m² = VIP LAND
+  
+**29)** Develop a program that reads the name of an employee, his/her salary, how many years he/she has been working at the company, and show his/her new salary, adjusted according to the following table:
+  - Up to 3 years at the company: 3% increase
+  - Between 3 and 10 years: 12.5% increase
+  - 10 years or more: 20% increase
+  
+**30)** ***[CHALLENGE]*** Redo algorithm 25, adding the feature of showing what type of triangle will be formed:
+  - EQUILATERAL: all sides equal
+  - ISOSCELES: two sides equal
+  - SCALENE: all sides different
+  
+**31)** ***[CHALLENGE]*** Create a Rock-Paper-Scissors game
+
+**32)** ***[CHALLENGE]*** Create a game where the computer will draw a number between 1 and 5, and the player will try to guess the drawn value.
+
+**33)** Write a program to approve or deny a bank loan to buy a house. The program will ask for the house value, the buyer's salary, and in how many years he/she will pay. Calculate the monthly payment value, knowing that it cannot exceed 30% of the salary, otherwise the loan will be denied.
+
+**34)** The Body Mass Index (BMI) is a value calculated based on a person's height and weight. According to the BMI value, we can classify the individual within certain ranges.
+  - below 18.5: Underweight
+  - between 18.5 and 25: Ideal weight
+  - between 25 and 30: Overweight
+  - between 30 and 40: Obesity
+  - above 40: Morbid obesity
+*Note: The BMI is calculated by the expression weight/height² (weight divided by the square of the height)*
+
+**35)** A car rental company needs to charge for its services. The rental of a car costs R$90 per day for a popular car and R$150 per day for a luxury car. In addition, the customer pays for the distance traveled. Create a program that reads the type of rented car (popular or luxury), how many rental days, and how many kilometers were traveled. At the end, show the price to be paid according to the following table:
+  - Popular cars (R$90 rental per day)
+  - Up to 100km traveled: R$0.20 per km
+  - Over 100km traveled: R$0.10 per km
+  - Luxury cars (R$150 rental per
