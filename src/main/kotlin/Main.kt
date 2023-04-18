@@ -11,4 +11,10 @@ fun main() {
     meterToOtherMeasures()
     moneyConversionRealToDollar()
     paintingWalls()
+    returnDelta()
+    promotionalPrice()
+    increasedSalary()
+    carRental()
+    employeeSalaryCalculated()
+    smokersLifetime()
 }
