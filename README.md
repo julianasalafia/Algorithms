@@ -1,7 +1,7 @@
 
 # Algorithms
 
-In this repository, you will find the 100 exercises given in Gustavo Guanabara's Programming Logic Course executed in Kotlin. You can find the original file in [here](https://www.cursoemvideo.com/wp-content/uploads/2019/08/exercicios-algoritmos.pdf).
+In this repository, you will find the 100 exercises given in Gustavo Guanabara's Programming Logic Course executed in Kotlin. You can find the original file in [here](https://www.cursoemvideo.com/wp-content/uploads/2019/08/exercicios-algoritmos.pdf). Translated with ChatGPT.
 
 ## 01 - BASIC SEQUENCES
 
@@ -215,3 +215,66 @@ Ex: Enter a value: 35
 	d) How many people who are over 1.90m tall weigh more than 100Kg.
 
 **55)** ***[CHALLENGE]*** Let's improve the game we made in exercise 32. From now on, the computer will randomly choose a number between 1 and 10 and the player will have 4 attempts to try to guess it.
+
+
+## 05 - WHILE WITH FLAG
+**56)** Create a program that reads several numbers from the keyboard and shows the sum of them at the end. Note: The program will be interrupted when the number 1111 is entered.
+
+**57)** Develop an application that reads the salary and gender of several employees.  At the end, show the total amount paid to men and the total paid to women. The program will ask the user whether he wants to continue or not whenever he reads the data of an employee.
+
+**58)** Make an algorithm that reads the age of several students in a class. The program will stop when the age 999 is entered. At the end, show how many students are in the class and what is the average age of the group.
+
+**59)** Create a program that reads the gender and age of several people. The program will ask the user whether he wants to continue or not for each person. At the end, show:
+
+	a) what is the highest age read 
+	b) how many men were registered 
+	c) what is the age of the youngest woman 
+	d) what is the average age among men
+
+**60)** Develop an algorithm that reads the name, age and gender of several people. The program will ask the user whether he wants to continue or not. At the end, show:
+
+	a) the name of the oldest person 
+	b) the name of the youngest woman 
+	c) the average age of the group 
+	d) how many men are over 30 years old 
+	e) how many women are under 18 years old
+
+##  06 - REPEAT-UNTIL LOOP
+**61)** Create a program that shows the following count on the screen using the "repeat until" structure: 
+*0 3 6 9 12 15 18 21 24 27 30 Done!*
+
+**62)** Make a program using the "repeat until" structure that reads the age of several people. At each loop, you should ask the user whether or not they want to continue entering data. At the end, when the user decides to stop, show on the screen:
+
+	a) How many ages were entered 
+	b) What is the average of the entered ages 
+	c) How many people are 21 years old or older
+
+**63)** Create a program using the "repeat until" structure that reads several numbers. At each loop, ask the user whether they want to continue or not. At the end, show on the screen:
+
+	a) The sum of all values 
+	b) What was the smallest value entered 
+	c) The average of all values 
+	d) How many values are even
+
+## 07 - REPEAT WITH FOR
+**64)** Develop a program using the "for" structure that shows the following count on the screen:
+*0 5 10 15 20 25 30 35 40 Done!*
+
+**65)** Develop a program using the "for" structure that shows the following count on the screen:
+*100 90 80 70 60 50 40 30 20 10 0 Done!*
+
+**66)** Write a program that reads any number and shows the multiplication table of that number, using the "for" structure. *Ex: Enter a value: 5. 5 x 1 = 5. 5 x 2 = 10. 5 x 3 = 15 (...)*
+
+**67)** Make a program using the "for" structure that reads a positive integer number and shows a count on the screen from 0 to the entered value: *Ex: Enter a value: 9. Count: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, END!*
+
+**68)** Create a program that reads the sex and weight of 8 people, using the "for" structure. At the end, show on the screen:
+
+	a) How many women were registered 
+	b) How many men weigh more than 100kg 
+	c) The average weight among women 
+	d) The heaviest weight among men
+
+**69)** ***[CHALLENGE]*** Develop a program that reads the first term and the ratio of an AP (Arithmetic Progression), showing on the screen the first 10 elements of the AP and the sum of all the values ​​in the sequence.
+
+**70)** ***[CHALLENGE]*** Make a program that shows the first 10 elements of the Fibonacci Sequence:
+*1 1 2 3 5 8 13 21...*
