@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Write a program that reads the price of a product, calculates and shows its PROMOTIONAL PRICE, with a 5% discount.
 fun promotionalPrice() {

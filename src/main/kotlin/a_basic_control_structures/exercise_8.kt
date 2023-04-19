@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Create an algorithm that reads a distance in meters and shows the corresponding values in other measures.
 fun meterToOtherMeasures() {

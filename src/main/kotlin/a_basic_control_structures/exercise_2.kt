@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Write a program that reads a person's name and displays a welcome message for them.
 fun welcomeMessage() {

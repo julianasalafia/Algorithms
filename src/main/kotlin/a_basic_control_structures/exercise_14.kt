@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // The car rental company needs your help to charge for its services. Write a program that asks for the number of
 // kilometers traveled by a rented car and the number of days it was rented for.

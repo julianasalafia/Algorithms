@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Write a program that reads an integer and displays its predecessor and successor.
 fun predecessorAndSuccessor() {

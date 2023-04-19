@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Develop an algorithm that reads two integers and displays the sum between them.
 fun sumBetweenIntegers() {

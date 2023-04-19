@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Create an algorithm that reads an employee's salary, calculates and shows their new salary with a 15% increase.
 fun increasedSalary() {

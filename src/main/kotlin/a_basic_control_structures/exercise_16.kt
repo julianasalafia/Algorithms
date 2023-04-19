@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // [CHALLENGE] Write a program to calculate the reduction in a smoker's lifetime.
 // Ask for the number of cigarettes smoked per day and how many years they have smoked.

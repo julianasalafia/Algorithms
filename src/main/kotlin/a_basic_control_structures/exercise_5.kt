@@ -1,4 +1,4 @@
-package basic_control_structures
+package a_basic_control_structures
 
 // Write a program that reads a student's two grades in a subject and displays their average on the screen.
 fun averageGrade() {
