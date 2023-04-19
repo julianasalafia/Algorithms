@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="" />
+    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_17.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_18.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_19.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_20.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_21.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_22.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_23.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_24.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_25.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_10.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_11.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_12.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_12.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_13.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_14.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_14.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_15.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_15.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_16.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_16.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_5.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_6.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_7.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_8.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basic_control_structures/exercise_9.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_9.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,24 +56,39 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/max/Documents/Project/algorithms/src/main/kotlin/basic_control_structures",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/max/Documents/Project/algorithms/src/main/kotlin/basic_control_structures&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\basic_control_structures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\02_basic_conditions" />
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

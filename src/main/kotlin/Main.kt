@@ -1,4 +1,5 @@
-import basic_control_structures.*
+import a_basic_control_structures.*
+import b_basic_conditions.*
 
 fun main() {
     helloWorld()
@@ -17,4 +18,14 @@ fun main() {
     carRental()
     employeeSalaryCalculated()
     smokersLifetime()
+    speedLimit()
+    canIVote()
+    studentGrades()
+    evenOrOdd()
+    leapYear()
+    militaryEnlistment()
+    womensDay()
+    distanceTicket()
+    isItPossibleTriangle()
+    distanceTicket()
 }

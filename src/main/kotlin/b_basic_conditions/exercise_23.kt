@@ -1,4 +1,4 @@
-package basic_control_structures
+package b_basic_conditions
 
 // In an exclusive promotion for Women's Day, a store wants to give discounts to everyone, but especially to women.
 // Create a program that reads the customer's name, gender, and purchase value and calculates the discounted price. Knowing that:
@@ -28,8 +28,8 @@ fun womensDay() {
     val _discountFemale = String.format("%.2f", discountFemale)
 
     when (option) {
-        1 -> println("discount for $name: R$$_discountMale.")
-        2 -> println("discount for $name: R$$_discountFemale.")
+        1 -> println("Discount for $name: R$$_discountMale.")
+        2 -> println("Discount for $name: R$$_discountFemale.")
         3 -> println("User without discount, sign up.")
         else -> println("Invalid option.")
     }

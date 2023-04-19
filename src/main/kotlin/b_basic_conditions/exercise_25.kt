@@ -1,4 +1,4 @@
-package basic_control_structures
+package b_basic_conditions
 
 // [CHALLENGE] Create a program that reads the size of three line segments. Analyze their lengths and say
 // if it is possible to form a triangle with these lines. Mathematically, for three segments to form a triangle,
