@@ -1,5 +1,6 @@
 import a_basic_control_structures.*
 import b_basic_conditions.*
+import c_compound_conditions.*
 
 fun main() {
     helloWorld()
@@ -28,4 +29,16 @@ fun main() {
     distanceTicket()
     isItPossibleTriangle()
     distanceTicket()
+    whichNumberIsGreater()
+    studentGPA()
+    classifyingLands()
+    adjustedSalary()
+    typeOfTriangle()
+    rockPaperScissorsChallenge()
+    drawnNumberChallenge()
+    bankLoan()
+    bmiScale()
+    rentalCar()
+    rewardPhysicalActivity()
+    adjustingSalary()
 }
