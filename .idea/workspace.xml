@@ -5,13 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="update readme">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_38.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_39.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_40.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_41.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_42.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_43.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_44.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_45.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_46.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_47.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_48.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_49.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_50.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_51.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_52.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_53.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_54.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_55.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_56.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_57.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_58.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_59.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_60.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/f_repeat_until_loop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/f_repeat_until_loop/exercise_61.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/f_repeat_until_loop/exercise_62.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/f_repeat_until_loop/exercise_63.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_64.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_65.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_66.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_67.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_68.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_69.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_70.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_33.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_33.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_34.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_34.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_35.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_35.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_36.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_36.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_37.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_37.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +67,24 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/max/Documents/Project/algorithms/src/main/kotlin/c_compound_conditions&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/max/Documents/Project/algorithms/src/main/kotlin/g_for_loop",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\g_for_loop" />
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\f_repeat_until_loop" />
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\e_while_flag" />
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\d_while_loops" />
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\c_compound_conditions" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\b_basic_conditions" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\a_basic_control_structures" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\basic_control_structures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\02_basic_conditions" />
