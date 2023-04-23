@@ -1,10 +1,10 @@
 package c_compound_conditions
 
-// [CHALLENGE] Create a Rock-Paper-Scissors game
-
 import kotlin.random.Random
 
-fun rockPaperScissorsChallenge() {
+// [CHALLENGE] Create a Rock-Paper-Scissors game
+
+fun main() {
     println("Choose an option:")
     println("1) rock")
     println("2) paper")

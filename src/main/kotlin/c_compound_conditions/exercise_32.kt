@@ -1,10 +1,10 @@
 package c_compound_conditions
 
-// [CHALLENGE] Create a game where the computer will draw a number between 1 and 5, and the player will try to guess the drawn value.
-
 import kotlin.random.Random
 
-fun drawnNumberChallenge() {
+// [CHALLENGE] Create a game where the computer will draw a number between 1 and 5, and the player will try to guess the drawn value.
+
+fun main() {
     val draw = Random.nextInt(1, 6)
 
     print("Type a number between 1 and 5: ")
