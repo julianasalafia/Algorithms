@@ -1,7 +1,8 @@
 package a_basic_control_structures
 
 // Create an algorithm that reads an employee's salary, calculates and shows their new salary with a 15% increase.
-fun increasedSalary() {
+
+fun main() {
     print("Current salary: ")
     val salary = readln().toDouble()
     val _salary = String.format("%.2f", salary)

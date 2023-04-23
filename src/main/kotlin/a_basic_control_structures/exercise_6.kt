@@ -1,8 +1,8 @@
 package a_basic_control_structures
 
 // Write a program that reads an integer and displays its predecessor and successor.
-fun predecessorAndSuccessor() {
 
+fun main() {
     print("Write a number: ")
     val number = readln().toInt()
 

@@ -1,7 +1,8 @@
 package a_basic_control_structures
 
 // Write a logic that reads the values of A, B, and C from a second-degree equation and shows the value of Delta.
-fun returnDelta() {
+
+fun main() {
     print("A: ")
     val a: Int = readln().toInt()
 

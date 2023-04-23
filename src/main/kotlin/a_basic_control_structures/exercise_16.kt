@@ -1,10 +1,13 @@
 package a_basic_control_structures
 
-// [CHALLENGE] Write a program to calculate the reduction in a smoker's lifetime.
-// Ask for the number of cigarettes smoked per day and how many years they have smoked.
-// Consider that a smoker loses 10 minutes of life for each cigarette.
-// Calculate how many days of life a smoker will lose and display the total in days.
-fun smokersLifetime() {
+/*
+    [CHALLENGE] Write a program to calculate the reduction in a smoker's lifetime.
+    Ask for the number of cigarettes smoked per day and how many years they have smoked.
+    Consider that a smoker loses 10 minutes of life for each cigarette.
+    Calculate how many days of life a smoker will lose and display the total in days.
+ */
+
+fun main() {
     val timeLostByCigar = 10 / 60.0
 
     print("Cigarettes smoked per day: ")

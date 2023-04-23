@@ -1,7 +1,8 @@
 package a_basic_control_structures
 
 // Develop an algorithm that reads two integers and displays the sum between them.
-fun sumBetweenIntegers() {
+
+fun main() {
     print("1st value: ")
     val value1 = readln().toInt()
 

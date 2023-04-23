@@ -1,7 +1,8 @@
 package a_basic_control_structures
 
 // Create a program that reads an employee's name and salary, and displays a message at the end.
-fun employeeSalary() {
+
+fun main() {
     print("Employee name: ")
     val employeeName = readlnOrNull()
 
