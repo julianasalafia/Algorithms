@@ -1,7 +1,8 @@
 package b_basic_conditions
 
 // Develop a program that reads an integer and shows whether it is EVEN or ODD.
-fun evenOrOdd() {
+
+fun main() {
     print("Number: ")
     val number = readln().toInt()
 
