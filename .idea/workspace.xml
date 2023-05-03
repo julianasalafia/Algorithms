@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="Remove class">
+    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while loops">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_51.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_51.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_52.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_52.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_53.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_53.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_54.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_54.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_56.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_56.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_57.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_57.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_58.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_58.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,30 +56,9 @@
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_44Kt">
-    <configuration name="Exercise_38Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_38Kt" />
-      <module name="algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.Exercise_59Kt">
     <configuration name="Exercise_44Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_44Kt" />
-      <module name="algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise_47Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_47Kt" />
-      <module name="algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise_49Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_49Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,13 +71,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Exercise_57Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_57Kt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise_58Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_58Kt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise_59Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_59Kt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Exercise_59Kt" />
+        <item itemvalue="Kotlin.Exercise_57Kt" />
+        <item itemvalue="Kotlin.Exercise_58Kt" />
         <item itemvalue="Kotlin.Exercise_44Kt" />
         <item itemvalue="Kotlin.Exercise_50Kt" />
-        <item itemvalue="Kotlin.Exercise_49Kt" />
-        <item itemvalue="Kotlin.Exercise_38Kt" />
-        <item itemvalue="Kotlin.Exercise_47Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682266605963</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="while loops">
+      <created>1683153813815</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683153813815</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -230,8 +236,8 @@
     <MESSAGE value="basic control structures" />
     <MESSAGE value="basic conditions" />
     <MESSAGE value="compound conditions" />
-    <MESSAGE value="while loops" />
     <MESSAGE value="Remove class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove class" />
+    <MESSAGE value="while loops" />
+    <option name="LAST_COMMIT_MESSAGE" value="while loops" />
   </component>
 </project>
