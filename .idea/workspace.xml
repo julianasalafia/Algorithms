@@ -4,59 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="update readme files">
+    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="Remove class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_10.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_11.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_12.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_12.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_13.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_14.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_14.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_15.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_15.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_16.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_16.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_4.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_5.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_6.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_7.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_8.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_9.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/a_basic_control_structures/exercise_9.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_17.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_17.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_18.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_18.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_19.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_19.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_20.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_20.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_21.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_21.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_22.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_22.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_23.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_23.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_24.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_24.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_25.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/b_basic_conditions/exercise_25.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_26.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_26.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_27.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_27.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_28.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_28.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_29.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_29.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_30.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_30.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_31.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_31.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_32.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_32.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_33.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_33.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_34.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_34.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_35.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_35.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_36.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_36.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_37.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/c_compound_conditions/exercise_37.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_38.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_38.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_39.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_39.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_40.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_40.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_41.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_41.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_42.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_42.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_43.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_43.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_44.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_44.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_45.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_45.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_46.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_46.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_47.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_47.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_48.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_48.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_49.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_49.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_50.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_50.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_51.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_51.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_52.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_52.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_53.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_53.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_54.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/d_while_loops/exercise_54.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,18 +182,56 @@
       <option name="project" value="LOCAL" />
       <updated>1682198289644</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="basic control structures">
+      <created>1682266516761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682266516761</updated>
+    </task>
+    <task id="LOCAL-00012" summary="basic conditions">
+      <created>1682266529108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682266529108</updated>
+    </task>
+    <task id="LOCAL-00013" summary="compound conditions">
+      <created>1682266543274</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682266543274</updated>
+    </task>
+    <task id="LOCAL-00014" summary="while loops">
+      <created>1682266594188</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682266594188</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Remove class">
+      <created>1682266605963</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682266605963</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="compound conditions" />
     <MESSAGE value="update readme structure files" />
     <MESSAGE value="update readme" />
-    <MESSAGE value="while loops" />
     <MESSAGE value="while with flag" />
     <MESSAGE value="repeat.. until loop" />
     <MESSAGE value="for loop" />
     <MESSAGE value="update readme files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme files" />
+    <MESSAGE value="basic control structures" />
+    <MESSAGE value="basic conditions" />
+    <MESSAGE value="compound conditions" />
+    <MESSAGE value="while loops" />
+    <MESSAGE value="Remove class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove class" />
   </component>
 </project>
