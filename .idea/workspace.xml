@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while loops">
+    <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while with flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_56.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_56.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_57.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_57.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_58.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/e_while_flag/exercise_58.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/max/Documents/Project/algorithms/src/main/kotlin/g_for_loop&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -56,16 +54,9 @@
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_59Kt">
+  <component name="RunManager" selected="Kotlin.Exercise_61Kt">
     <configuration name="Exercise_44Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_44Kt" />
-      <module name="algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise_50Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_50Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,13 +83,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Exercise_61Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="f_repeat_until_loop.Exercise_61Kt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Exercise_61Kt" />
         <item itemvalue="Kotlin.Exercise_59Kt" />
         <item itemvalue="Kotlin.Exercise_57Kt" />
         <item itemvalue="Kotlin.Exercise_58Kt" />
         <item itemvalue="Kotlin.Exercise_44Kt" />
-        <item itemvalue="Kotlin.Exercise_50Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -223,13 +221,19 @@
       <option name="project" value="LOCAL" />
       <updated>1683153813815</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="while with flag">
+      <created>1683154621307</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683154621307</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update readme structure files" />
     <MESSAGE value="update readme" />
-    <MESSAGE value="while with flag" />
     <MESSAGE value="repeat.. until loop" />
     <MESSAGE value="for loop" />
     <MESSAGE value="update readme files" />
@@ -238,6 +242,7 @@
     <MESSAGE value="compound conditions" />
     <MESSAGE value="Remove class" />
     <MESSAGE value="while loops" />
-    <option name="LAST_COMMIT_MESSAGE" value="while loops" />
+    <MESSAGE value="while with flag" />
+    <option name="LAST_COMMIT_MESSAGE" value="while with flag" />
   </component>
 </project>
