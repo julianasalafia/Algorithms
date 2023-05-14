@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while with flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_64.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_64.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_65.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_65.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_66.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_66.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_67.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_67.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_68.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_68.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_69.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_69.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +24,9 @@
         <option value="Kotlin File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,14 +63,7 @@
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_61Kt">
-    <configuration name="Exercise_44Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d_while_loops.Exercise_44Kt" />
-      <module name="algorithms" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.Exercise_69Kt">
     <configuration name="Exercise_57Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_57Kt" />
       <module name="algorithms" />
@@ -90,13 +92,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Exercise_69Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="g_for_loop.Exercise_69Kt" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Exercise_69Kt" />
         <item itemvalue="Kotlin.Exercise_61Kt" />
         <item itemvalue="Kotlin.Exercise_59Kt" />
         <item itemvalue="Kotlin.Exercise_57Kt" />
         <item itemvalue="Kotlin.Exercise_58Kt" />
-        <item itemvalue="Kotlin.Exercise_44Kt" />
       </list>
     </recent_temporary>
   </component>
