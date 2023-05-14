@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while with flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_64.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_64.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_65.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_65.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_66.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_66.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_67.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_67.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_68.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_68.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_69.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/g_for_loop/exercise_69.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -38,62 +33,62 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/max/Documents/Project/algorithms/src/main/kotlin/g_for_loop&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/max/Documents/Project/algorithms/src/main/kotlin/j_functions",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\j_functions" />
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\i_procedures" />
+      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\h_vectors" />
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\g_for_loop" />
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\f_repeat_until_loop" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\e_while_flag" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\d_while_loops" />
-      <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\c_compound_conditions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\02_basic_conditions" />
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_69Kt">
-    <configuration name="Exercise_57Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_57Kt" />
+  <component name="RunManager" selected="Kotlin.Exercise_81Kt">
+    <configuration name="Exercise_71Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_71Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_58Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_58Kt" />
+    <configuration name="Exercise_74Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_74Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_59Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="e_while_flag.Exercise_59Kt" />
+    <configuration name="Exercise_77Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_77Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_61Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="f_repeat_until_loop.Exercise_61Kt" />
+    <configuration name="Exercise_79Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_79Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_69Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="g_for_loop.Exercise_69Kt" />
+    <configuration name="Exercise_81Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_81Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,11 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Exercise_69Kt" />
-        <item itemvalue="Kotlin.Exercise_61Kt" />
-        <item itemvalue="Kotlin.Exercise_59Kt" />
-        <item itemvalue="Kotlin.Exercise_57Kt" />
-        <item itemvalue="Kotlin.Exercise_58Kt" />
+        <item itemvalue="Kotlin.Exercise_81Kt" />
+        <item itemvalue="Kotlin.Exercise_79Kt" />
+        <item itemvalue="Kotlin.Exercise_77Kt" />
+        <item itemvalue="Kotlin.Exercise_74Kt" />
+        <item itemvalue="Kotlin.Exercise_71Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -253,5 +248,9 @@
     <MESSAGE value="while loops" />
     <MESSAGE value="while with flag" />
     <option name="LAST_COMMIT_MESSAGE" value="while with flag" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
