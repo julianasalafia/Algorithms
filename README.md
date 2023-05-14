@@ -10,3 +10,6 @@ In this repository, you will find the 100 exercises given in Gustavo Guanabara's
 - [05 - While with Flag](https://github.com/julianasalafia/algorithms/blob/master/src/main/kotlin/e_while_flag/)
 - [06 - Repeat..Until loop](https://github.com/julianasalafia/algorithms/blob/master/src/main/kotlin/f_repeat_until_loop/)
 - [07 - For loop](https://github.com/julianasalafia/algorithms/blob/master/src/main/kotlin/g_for_loop/)
+- [08 - Vectors](https://github.com/julianasalafia/algorithms/blob/master/src/main/kotlin/h_vectors/)
+- [09 - Procedures](https://github.com/julianasalafia/algorithms/tree/master/src/main/kotlin/i_procedures)
+- [10 - Functions](https://github.com/julianasalafia/algorithms/blob/master/src/main/kotlin/j_functions/)
