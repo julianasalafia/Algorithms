@@ -10,3 +10,15 @@ Learning Portugol
 Learning Portugol
 +------------------------+
 */
+
+fun main() {
+    generator("learning procedures", 4)
+}
+
+fun generator(message: String, n: Int) {
+    println("-------------------------------------")
+    for (c in 1..n) {
+        println(message)
+    }
+    println("-------------------------------------")
+}

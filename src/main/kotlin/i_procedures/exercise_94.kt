@@ -9,3 +9,24 @@ Ex:
 Fibonacci(5) will generate 1 >> 1 >> 2 >> 3 >> 5 >> END.
 Fibonacci(9) will generate 1 >> 1 >> 2 >> 3 >> 5 >> 8 >> 13 >> 21 >> 34 >> END.
 */
+
+fun main() {
+    fibonacci(9)
+}
+
+fun fibonacci(terms: Int) {
+    var a = 0
+    var b = 1
+
+    print("$b >> ")
+
+    for (counter in 2..terms) {
+        val c = a + b
+
+        a = b
+        b = c
+
+        print("$c >> ")
+    }
+    print("END!")
+}

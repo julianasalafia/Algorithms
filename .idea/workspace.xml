@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while with flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_86.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_86.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_87.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_87.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_88.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_88.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_89.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_89.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_90.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_90.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_91.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_91.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +39,18 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/max/Documents/Project/algorithms/src/main/kotlin/j_functions",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/max/Documents/Project/algorithms/src/main/kotlin/j_functions&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin\j_functions" />

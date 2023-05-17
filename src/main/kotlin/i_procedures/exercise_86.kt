@@ -7,3 +7,13 @@ package i_procedures
 Hello, World!
 +------------------------+
 */
+
+fun main() {
+    generator()
+}
+
+fun generator() {
+    println("----------------")
+    println("  Hello world!  ")
+    println("----------------")
+}
