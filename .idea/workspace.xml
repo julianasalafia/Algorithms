@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e91259f3-9852-4085-a044-f21d48981ce1" name="Changes" comment="while with flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_86.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_86.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_87.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_87.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_88.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_88.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_89.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_89.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_90.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_90.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_91.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/i_procedures/exercise_91.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_100.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_100.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_95.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_95.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_96.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_96.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_97.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_97.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_98.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_98.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_99.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/j_functions/exercise_99.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +64,9 @@
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_81Kt">
-    <configuration name="Exercise_71Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_71Kt" />
+  <component name="RunManager" selected="Kotlin.Exercise_100Kt">
+    <configuration name="Exercise_100Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j_functions.Exercise_100Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Exercise_100Kt" />
         <item itemvalue="Kotlin.Exercise_81Kt" />
         <item itemvalue="Kotlin.Exercise_79Kt" />
         <item itemvalue="Kotlin.Exercise_77Kt" />
         <item itemvalue="Kotlin.Exercise_74Kt" />
-        <item itemvalue="Kotlin.Exercise_71Kt" />
       </list>
     </recent_temporary>
   </component>
