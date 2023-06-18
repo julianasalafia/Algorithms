@@ -64,7 +64,7 @@
       <recent name="C:\Users\max\Documents\Project\algorithms\src\main\kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Exercise_100Kt">
+  <component name="RunManager" selected="Kotlin.Exercise_1Kt">
     <configuration name="Exercise_100Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="j_functions.Exercise_100Kt" />
       <module name="algorithms" />
@@ -72,8 +72,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_74Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="h_vectors.Exercise_74Kt" />
+    <configuration name="Exercise_1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="a_basic_control_structures.Exercise_1Kt" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Exercise_1Kt" />
         <item itemvalue="Kotlin.Exercise_100Kt" />
         <item itemvalue="Kotlin.Exercise_81Kt" />
         <item itemvalue="Kotlin.Exercise_79Kt" />
         <item itemvalue="Kotlin.Exercise_77Kt" />
-        <item itemvalue="Kotlin.Exercise_74Kt" />
       </list>
     </recent_temporary>
   </component>
