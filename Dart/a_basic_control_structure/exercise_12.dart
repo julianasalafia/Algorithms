@@ -6,20 +6,16 @@ void main() {
   String answer = 'yes';
 
   while (answer == 'yes') {
-    try {
-      stdout.write('product price: ');
-      double productPrice = double.parse(stdin.readLineSync()!);
+    double productPrice = readDouble('product price: ');
+    double percentage = readDouble('discount(%): ');
 
-      stdout.write('discount(%): ');
-      double percentage = double.parse(stdin.readLineSync()!);
-
+    if (percentage < 0 || percentage > 100) {
+      print('Error: Discount percentage must be between 0 and 100');
+    } else {
       promotionalPrice(productPrice, percentage);
-
-      stdout.write('do you want to try again? ');
-      answer = stdin.readLineSync()!.toLowerCase();
-    } catch (exception) {
-      print('Error: Please enter a valid integer');
     }
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
   }
 }
 
@@ -32,4 +28,18 @@ double promotionalPrice(double productPrice, double percentage) {
       'Product price: US\$${productPrice.toStringAsFixed(2)}, discount: US\$${discountValue.toStringAsFixed(2)}, final price: US\$${finalPrice.toStringAsFixed(2)}');
 
   return finalPrice;
+}
+
+double readDouble(String prompt) {
+  double? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+    if (value == null) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null);
+  return value;
 }
