@@ -6,18 +6,58 @@
 
 import 'dart:io';
 
+const double KM_PRICE = 0.20;
+const int DAY_PRICE = 90;
+
 void main() {
-  stdout.write('km travelled: ');
-  double kmTravelled = double.parse(stdin.readLineSync()!);
+  String answer = 'yes';
 
-  stdout.write('days rented: ');
-  int daysRented = int.parse(stdin.readLineSync()!);
+  while (answer == 'yes') {
+    double kmTravelled = getDoubleInput('km travelled: ');
+    int daysRented = getIntInput('days rented: ');
 
-  double km = kmTravelled * 0.20;
-  int days = daysRented * 90;
+    calculatePrice(kmTravelled, daysRented);
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
+}
+
+void calculatePrice(double kmTravelled, int daysRented) {
+  double km = kmTravelled * KM_PRICE;
+  int days = daysRented * DAY_PRICE;
 
   double totalPrice = km + days;
 
   print(
-      'km travelled: $kmTravelled, days rented: $daysRented, total price: ${totalPrice.toStringAsFixed(2)}');
+    'km travelled: $kmTravelled, days rented: $daysRented, total price: US\$${totalPrice.toStringAsFixed(2)}',
+  );
+}
+
+double getDoubleInput(String prompt) {
+  double? value;
+
+  while (value == null) {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+    if (value == null) {
+      print('Error: Please enter a valid number');
+    }
+  }
+  return value;
+}
+
+int getIntInput(String prompt) {
+  int? value;
+
+  while (value == null) {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+    if (value == null) {
+      print('Error: Please enter a valid number');
+    }
+  }
+  return value;
 }
