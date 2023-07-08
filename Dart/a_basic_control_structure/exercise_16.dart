@@ -11,17 +11,22 @@ const double timeLostByCigar = 10 / 60.0;
 
 void main() {
   double smokedPerDay = readDouble('Cigarettes smoked per day: ');
-  double yearsSmoking = readDouble('Years smoking: ');
+  double smokingTime = readDouble('Years smoking: ');
 
-  timeLost(smokedPerDay, yearsSmoking);
+  timeLost(smokedPerDay, smokingTime);
 }
 
-void timeLost(double smokedPerDay, double yearsSmoking) {
-  double totalTimeLost = smokedPerDay * timeLostByCigar * 365 * yearsSmoking;
+void timeLost(double smokedPerDay, double smokingTime) {
+  int yearsSmoking = smokingTime.floor();
+  int monthsSmoking = ((smokingTime - yearsSmoking) * 12).round();
+
+  double totalTimeLost = smokedPerDay *
+      timeLostByCigar *
+      (365 * yearsSmoking + 30 * monthsSmoking);
   int daysLost = totalTimeLost ~/ 24;
 
   print(
-    'Cigarettes smoked per day: $smokedPerDay; years smoking: $yearsSmoking; days lost: $daysLost.',
+    'Cigarettes smoked per day: $smokedPerDay; years smoking: $smokingTime; days lost: $daysLost.',
   );
 }
 
