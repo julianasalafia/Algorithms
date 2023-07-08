@@ -32,9 +32,9 @@ double readDouble(String prompt) {
     stdout.write(prompt);
     String? input = stdin.readLineSync();
     value = double.tryParse(input!);
-    if (value == null) {
+    if (value == null || value < 0) {
       print('Error: Please enter a valid number');
     }
-  } while (value == null);
+  } while (value == null || value < 0);
   return value;
 }
