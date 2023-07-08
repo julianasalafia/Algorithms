@@ -10,15 +10,31 @@ import 'dart:io';
 const double timeLostByCigar = 10 / 60.0;
 
 void main() {
-  stdout.write('Cigarettes smoked per day: ');
-  double smokedPerDay = double.parse(stdin.readLineSync()!);
+  double smokedPerDay = readDouble('Cigarettes smoked per day: ');
+  double yearsSmoking = readDouble('Years smoking: ');
 
-  stdout.write('Years smoking: ');
-  double yearsSmoking = double.parse(stdin.readLineSync()!);
+  timeLost(smokedPerDay, yearsSmoking);
+}
 
+void timeLost(double smokedPerDay, double yearsSmoking) {
   double totalTimeLost = smokedPerDay * timeLostByCigar * 365 * yearsSmoking;
   int daysLost = totalTimeLost ~/ 24;
 
   print(
-      'Cigarettes smoked per day: $smokedPerDay; years smoking: $yearsSmoking; days lost: $daysLost');
+    'Cigarettes smoked per day: $smokedPerDay; years smoking: $yearsSmoking; days lost: $daysLost.',
+  );
+}
+
+double readDouble(String prompt) {
+  double? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+    if (value == null) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null);
+  return value;
 }
