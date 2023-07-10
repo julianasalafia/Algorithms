@@ -6,14 +6,38 @@
 import 'dart:io';
 
 void main() {
-  stdout.write('speed limit (km/h): ');
-  int speedLimit = int.parse(stdin.readLineSync()!);
+  String answer = 'yes';
 
-  stdout.write('car speed (km/h): ');
-  int carSpeed = int.parse(stdin.readLineSync()!);
+  while (answer == 'yes') {
+    int speedLimit = readInt('speed limit (km/h): ');
+    int carSpeed = readInt('car speed (km/h): ');
 
+    fine(speedLimit, carSpeed);
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
+}
+
+void fine(int speedLimit, int carSpeed) {
   if (carSpeed > speedLimit) {
     double fineAmount = (carSpeed - speedLimit) * 5;
     print('you\'ve been fined in US\$${fineAmount.toStringAsFixed(2)}');
+  } else {
+    print('you\'re good!');
   }
+}
+
+int readInt(String prompt) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+    if (value == null || value < 0) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null || value < 0);
+  return value;
 }
