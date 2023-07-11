@@ -5,19 +5,22 @@ import 'dart:io';
 const currentYear = 2023;
 
 void main() {
+  birthYear();
+}
+
+void birthYear() {
   String? answer;
 
   do {
-    stdout.write('birth year: ');
-    int? birthYear = int.tryParse(stdin.readLineSync()!);
+    int birthYear = readInt('birth year: ');
+
     if (birthYear == null) {
       print('Error: Please enter a valid number');
     } else {
       int age = currentYear - birthYear;
       canVote(age);
 
-      stdout.write('do you want to try again? ');
-      answer = stdin.readLineSync()!;
+      answer = readString('do you want to try again? ').toLowerCase();
     }
   } while (answer == 'yes');
 }
@@ -28,4 +31,36 @@ void canVote(int age) {
   } else {
     print('You can\'t vote!');
   }
+}
+
+int readInt(String prompt) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+
+    if (value == null || value < 0) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null || value < 0);
+
+  return value;
+}
+
+String readString(String prompt) {
+  String? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = input!;
+
+    if (value == null) {
+      print('Error: Please enter a valid string');
+    }
+  } while (value == null);
+
+  return value;
 }
