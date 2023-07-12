@@ -10,8 +10,8 @@ void main() {
 
   while (answer == 'yes') {
     String name = readString('name: ');
-    double grade1 = readDouble('G1: ');
-    double grade2 = readDouble('G2: ');
+    double grade1 = readDouble('G1: ', 0, 10);
+    double grade2 = readDouble('G2: ', 0, 10);
 
     gpaCalculate(grade1, grade2, name);
 
@@ -29,7 +29,7 @@ void gpaCalculate(double grade1, double grade2, String name) {
   }
 }
 
-double readDouble(String prompt) {
+double readDouble(String prompt, double min, double max) {
   double? value;
 
   do {
@@ -37,10 +37,10 @@ double readDouble(String prompt) {
     String? input = stdin.readLineSync();
     value = double.tryParse(input!);
 
-    if (value == null || value < 0 || value > 10) {
+    if (value == null || value < min || value > max) {
       print('Error: Please enter a valid number');
     }
-  } while (value == null || value < 0 || value > 10);
+  } while (value == null || value < min || value > max);
 
   return value;
 }
