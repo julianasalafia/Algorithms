@@ -5,12 +5,27 @@
 import 'dart:io';
 
 void main() {
-  stdout.write('Year: ');
-  int year = int.parse(stdin.readLineSync()!);
+  String answer = 'yes';
 
-  if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
-    print('Leap year!');
-  } else {
-    print('Non-leap year!');
+  while (answer == 'yes') {
+    try {
+      stdout.write('Year: ');
+      int year = int.parse(stdin.readLineSync()!);
+
+      if (isLeapYear(year)) {
+        print('Leap year!');
+      } else {
+        print('Non-leap year!');
+      }
+
+      stdout.write('do you want to try again? ');
+      answer = stdin.readLineSync()!.toLowerCase();
+    } catch (exception) {
+      print('Error: Please, enter a valid year.');
+    }
   }
+}
+
+bool isLeapYear(int year) {
+  return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 }
