@@ -1,6 +1,16 @@
 /*
-    Write a program that reads a guy's birth year and shows his situation in relation to military enlistment.
-    If it is before 18 years old, show how many years are left until enlistment
-    If already after 18 years old, show how many years have passed since enlistment
+    Make an algorithm that reads a specific year and shows whether or not it is LEAP year.
 */
 
+import 'dart:io';
+
+void main() {
+  stdout.write('Year: ');
+  int year = int.parse(stdin.readLineSync()!);
+
+  if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
+    print('Leap year!');
+  } else {
+    print('Non-leap year!');
+  }
+}
