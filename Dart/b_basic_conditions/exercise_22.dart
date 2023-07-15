@@ -8,6 +8,8 @@ import 'dart:io';
 
 const currentYear = 2023;
 
+enum EnlistmentStatus { underage, legalAge, enlistmentAge, error }
+
 void main() {
   militaryAge(currentYear);
 }
@@ -16,27 +18,43 @@ void militaryAge(int currentYear) {
   int enlistmentYears;
   String answer = 'yes';
 
-  while (answer == 'yes') {
+  do {
     int birthYear = readInt('Birth year: ');
-
     int age = currentYear - birthYear;
+    EnlistmentStatus status = getEnlistmentStatus(age);
 
-    if (age < 18 && age > 0) {
-      enlistmentYears = 18 - age;
-      print(
-          'Underage. You will be drafted into the military in $enlistmentYears years.');
-    } else if (age > 18 && age < 100) {
-      enlistmentYears = age - 18;
-      print(
-          'Legal age. You missed the military enlistment by $enlistmentYears years.');
-    } else if (age < 0 || age > 100) {
-      stdout.write('Error: Please, try again. ');
-    } else {
-      print('You are at the age of enlistment.');
+    switch (status) {
+      case EnlistmentStatus.underage:
+        enlistmentYears = 18 - age;
+        print(
+            'Underage. You will be drafted into the military in $enlistmentYears years.');
+        break;
+      case EnlistmentStatus.legalAge:
+        enlistmentYears = age - 18;
+        print(
+            'Legal age. You missed the military enlistment by $enlistmentYears years.');
+        break;
+      case EnlistmentStatus.enlistmentAge:
+        print('You are at the age of enlistment.');
+        break;
+      case EnlistmentStatus.error:
+        stdout.write('Error: Wrong birth date. ');
+        break;
     }
-
     stdout.write('Do you want to try again? ');
     answer = stdin.readLineSync()!.toLowerCase();
+  } while (answer == 'yes');
+}
+
+EnlistmentStatus getEnlistmentStatus(int age) {
+  if (age < 18 && age > 0) {
+    return EnlistmentStatus.underage;
+  } else if (age > 18 && age < 100) {
+    return EnlistmentStatus.legalAge;
+  } else if (age == 18) {
+    return EnlistmentStatus.enlistmentAge;
+  } else {
+    return EnlistmentStatus.error;
   }
 }
 
