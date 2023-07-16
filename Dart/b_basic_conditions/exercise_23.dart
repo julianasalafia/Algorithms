@@ -9,29 +9,50 @@ import 'dart:io';
 
 const int discountPercentageMale = 5;
 const int discountPercentageFemale = 13;
+String answer = 'yes';
 
 void main() {
-  stdout.write('what is your name? ');
-  String name = stdin.readLineSync()!;
+  do {
+    stdout.write('what is your name? ');
+    String name = stdin.readLineSync()!;
 
-  stdout.write('purchase price: ');
-  double purchasePrice = double.parse(stdin.readLineSync()!);
+    stdout.write('purchase price: ');
+    double purchasePrice = double.parse(stdin.readLineSync()!);
 
-  print('gender:\n1) male\n2) female\n3) other');
+    print('gender:\n1) male\n2) female\n3) other');
 
-  stdout.write(': ');
-  int option = int.parse(stdin.readLineSync()!);
+    stdout.write(': ');
+    int option = int.parse(stdin.readLineSync()!);
 
-  double discountValueMale = (discountPercentageMale * purchasePrice) / 100;
-  double discountValueFemale = (discountPercentageFemale * purchasePrice) / 100;
+    double? discountValue = returnDiscountAmount(option, purchasePrice);
+
+    if (discountValue != null) {
+      finalPrice(name, discountValue);
+    }
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  } while (answer == 'yes');
+}
+
+double? returnDiscountAmount(int option, double? purchasePrice) {
+  late double? discountValue;
 
   if (option == 1) {
-    print('discount for $name: \$$discountValueMale');
-  } else if (option == 2) {
-    print('discount for $name: \$$discountValueFemale');
-  } else if (option == 3) {
-    print('User without discount, sign up.');
-  } else {
-    print('Invalid option.');
+    discountValue = discountPercentageMale * purchasePrice! / 100;
+    return discountValue;
   }
+
+  if (option == 2) {
+    discountValue = discountPercentageFemale * purchasePrice! / 100;
+    return discountValue;
+  }
+
+  if (option != 1 && option != 2) {
+    print('not valid');
+  }
+}
+
+void finalPrice(String name, double discountValue) {
+  print('discount for $name: \$$discountValue');
 }
