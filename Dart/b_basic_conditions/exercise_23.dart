@@ -24,7 +24,7 @@ void main() {
     double? discountValue = returnDiscountAmount(option, purchasePrice);
 
     if (discountValue != null) {
-      finalPrice(name, discountValue, purchasePrice);
+      printFinalPrice(name, discountValue, purchasePrice);
     }
 
     stdout.write('Do you want to try again? ');
@@ -33,24 +33,18 @@ void main() {
 }
 
 double? returnDiscountAmount(int option, double? purchasePrice) {
-  late double? discountValue;
-
-  if (option == 1) {
-    discountValue = discountPercentageMale * purchasePrice! / 100;
-    return discountValue;
-  }
-
-  if (option == 2) {
-    discountValue = discountPercentageFemale * purchasePrice! / 100;
-    return discountValue;
-  }
-
-  if (option != 1 && option != 2) {
-    print('Discount not available. Please, sign up.');
+  switch (option) {
+    case 1:
+      return discountPercentageMale * purchasePrice! / 100;
+    case 2:
+      return discountPercentageFemale * purchasePrice! / 100;
+    default:
+      print('Discount not available. Please, sign up.');
+      return null;
   }
 }
 
-void finalPrice(String name, double discountValue, purchasePrice) {
+void printFinalPrice(String name, double discountValue, purchasePrice) {
   double finalPriceToUser = purchasePrice - discountValue;
   print(
       'Discount for $name: \$${discountValue.toStringAsFixed(2)}. Final price: \$${finalPriceToUser.toStringAsFixed(2)}');
@@ -80,7 +74,7 @@ String readString(String prompt) {
     value = input!;
 
     if (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$'))) {
-      print('Error: Please enter a valid string');
+      print('Error: Please enter a valid name');
     }
   } while (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$')));
 
