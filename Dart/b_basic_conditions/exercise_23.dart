@@ -13,10 +13,10 @@ String answer = 'yes';
 
 void main() {
   do {
-    String name = readString('what is your name? ');
-    double purchasePrice = readDouble('purchase price: ');
+    String name = readString('What is your name? ').capitalize();
+    double purchasePrice = readDouble('Purchase price: ');
 
-    print('gender:\n1) male\n2) female\n3) other');
+    print('Gender:\n1) Male\n2) Female\n3) Other');
 
     double userOption = readDouble(': ');
     int option = userOption.toInt();
@@ -24,10 +24,10 @@ void main() {
     double? discountValue = returnDiscountAmount(option, purchasePrice);
 
     if (discountValue != null) {
-      finalPrice(name, discountValue);
+      finalPrice(name, discountValue, purchasePrice);
     }
 
-    stdout.write('do you want to try again? ');
+    stdout.write('Do you want to try again? ');
     answer = stdin.readLineSync()!.toLowerCase();
   } while (answer == 'yes');
 }
@@ -46,12 +46,14 @@ double? returnDiscountAmount(int option, double? purchasePrice) {
   }
 
   if (option != 1 && option != 2) {
-    print('discount not available. please, sign up.');
+    print('Discount not available. Please, sign up.');
   }
 }
 
-void finalPrice(String name, double discountValue) {
-  print('discount for $name: \$$discountValue');
+void finalPrice(String name, double discountValue, purchasePrice) {
+  double finalPriceToUser = purchasePrice - discountValue;
+  print(
+      'Discount for $name: \$${discountValue.toStringAsFixed(2)}. Final price: \$${finalPriceToUser.toStringAsFixed(2)}');
 }
 
 double readDouble(String prompt) {
@@ -83,4 +85,10 @@ String readString(String prompt) {
   } while (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$')));
 
   return value;
+}
+
+extension StringExtension on String {
+  String capitalize() {
+    return "${this[0].toUpperCase()}${this.substring(1).toLowerCase()}";
+  }
 }
