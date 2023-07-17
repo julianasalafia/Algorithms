@@ -7,19 +7,16 @@ import 'dart:io';
 
 const priceUnder200km = 0.50;
 const priceAbove200km = 0.45;
+const kmToCharge = 200;
 
 void main() {
   double plannedDistance = readDouble('Planned distance: ');
 
-  if (plannedDistance > 0 && plannedDistance <= 200) {
-    double price = plannedDistance * priceUnder200km;
-
-    print('Distance: $plannedDistance. Price: ${price.toStringAsFixed(2)}');
-  } else {
-    double price = plannedDistance * priceAbove200km;
-
-    print('Distance: $plannedDistance. Price: ${price..toStringAsFixed(2)}');
-  }
+  double price = plannedDistance <= kmToCharge
+      ? plannedDistance * priceUnder200km
+      : plannedDistance * priceAbove200km;
+  print(
+      'Distance: ${plannedDistance}km. Price: \$${price.toStringAsFixed(2)}.');
 }
 
 double readDouble(String prompt) {
@@ -31,7 +28,7 @@ double readDouble(String prompt) {
     value = double.tryParse(input!);
 
     if (value == null || value < 0) {
-      print('Error: Please enter a valid distance');
+      print('Error: Please enter a valid distance.');
     }
   } while (value == null || value < 0);
   return value;
