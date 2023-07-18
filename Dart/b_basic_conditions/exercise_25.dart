@@ -11,15 +11,15 @@ void main() {
   int b = readInt('B: ');
   int c = readInt('C: ');
 
-  isTriangle(a, b, c);
-}
-
-void isTriangle(int a, int b, int c) {
-  if ((a < (b + c)) && (b < (a + c)) && (c < (a + b))) {
-    print('Triangle.');
+  if (isTriangle(a, b, c)) {
+    print('Triangle');
   } else {
     print('Not a triangle.');
   }
+}
+
+bool isTriangle(int a, int b, int c) {
+  return (a < (b + c)) && (b < (a + c)) && (c < (a + b));
 }
 
 int readInt(String prompt) {
