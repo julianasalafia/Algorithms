@@ -7,16 +7,33 @@
 import 'dart:io';
 
 void main() {
-  stdout.write('A: ');
-  int a = int.parse(stdin.readLineSync()!);
-  stdout.write('B: ');
-  int b = int.parse(stdin.readLineSync()!);
-  stdout.write('C: ');
-  int c = int.parse(stdin.readLineSync()!);
+  int a = readInt('A: ');
+  int b = readInt('B: ');
+  int c = readInt('C: ');
 
+  isTriangle(a, b, c);
+}
+
+void isTriangle(int a, int b, int c) {
   if ((a < (b + c)) && (b < (a + c)) && (c < (a + b))) {
     print('Triangle.');
   } else {
     print('Not a triangle.');
   }
+}
+
+int readInt(String prompt) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+
+    if (value == null || value < 0) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null || value < 0);
+
+  return value;
 }
