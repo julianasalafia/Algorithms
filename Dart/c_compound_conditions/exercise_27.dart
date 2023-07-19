@@ -7,12 +7,19 @@ import 'dart:io';
 enum GradeStatus { passed, remedialClass, failed, error }
 
 void main() {
-  double firstGrade = readDouble('1st grade: ');
-  double secondGrade = readDouble('2nd grade: ');
+  String answer = 'yes';
 
-  double gpa = calculateGPA(firstGrade, secondGrade);
-  GradeStatus gradeStatus = getGradeStatus(gpa);
-  printGradeStatus(gradeStatus, gpa);
+  do {
+    double firstGrade = readDouble('1st grade: ');
+    double secondGrade = readDouble('2nd grade: ');
+
+    double gpa = calculateGPA(firstGrade, secondGrade);
+    GradeStatus gradeStatus = getGradeStatus(gpa);
+    printGradeStatus(gradeStatus, gpa);
+
+    stdout.write('Do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  } while (answer == 'yes');
 }
 
 void printGradeStatus(GradeStatus gradeStatus, double gpa) {
