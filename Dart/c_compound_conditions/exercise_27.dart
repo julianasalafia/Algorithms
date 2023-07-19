@@ -4,6 +4,8 @@
 
 import 'dart:io';
 
+enum GradeStatus { passed, remedialClass, failed, error }
+
 void main() {
   stdout.write('1st grade: ');
   double firstGrade = double.parse(stdin.readLineSync()!);
@@ -13,13 +15,32 @@ void main() {
 
   double gpa = (firstGrade + secondGrade) / 2;
 
-  if (gpa >= 0 && gpa < 5) {
-    print('GPA: $gpa. FAILED.');
+  GradeStatus gradeStatus = getGradeStatus(gpa);
+
+  switch (gradeStatus) {
+    case GradeStatus.passed:
+      print('GPA: $gpa. \nPASSED.');
+      break;
+    case GradeStatus.remedialClass:
+      print('GPA: $gpa. \nREMEDIAL CLASSES.');
+      break;
+    case GradeStatus.failed:
+      print('GPA: $gpa. \nFAILED.');
+      break;
+    case GradeStatus.error:
+      print('ERROR: NaN');
+      break;
+  }
+}
+
+GradeStatus getGradeStatus(double gpa) {
+  if (gpa >= 7 && gpa <= 10) {
+    return GradeStatus.passed;
   } else if (gpa >= 5 && gpa < 7) {
-    print('GPA: $gpa. REMEDIAL CLASSES.');
-  } else if (gpa >= 7 && gpa <= 10) {
-    print('GPA: $gpa. PASSED.');
+    return GradeStatus.remedialClass;
+  } else if (gpa >= 0 && gpa < 5) {
+    return GradeStatus.failed;
   } else {
-    print('Invalid.');
+    return GradeStatus.error;
   }
 }
