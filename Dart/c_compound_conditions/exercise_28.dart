@@ -7,11 +7,18 @@ import 'dart:io';
 enum AreaStatus { popularLand, masterLand, vipLand, error }
 
 void main() {
-  double width = readDouble('width: ');
-  double length = readDouble('length: ');
-  double area = calculateArea(width, length);
-  AreaStatus areaStatus = getAreaStatus(area);
-  printAreaStatus(areaStatus, area);
+  String answer = 'yes';
+
+  while (answer == 'yes') {
+    double width = readDouble('width: ');
+    double length = readDouble('length: ');
+    double area = calculateArea(width, length);
+    AreaStatus areaStatus = getAreaStatus(area);
+    printAreaStatus(areaStatus, area);
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 double calculateArea(double width, double length) {
