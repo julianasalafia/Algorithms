@@ -7,16 +7,16 @@ import 'dart:io';
 enum AreaStatus { popularLand, masterLand, vipLand, error }
 
 void main() {
-  stdout.write('width: ');
-  double width = double.parse(stdin.readLineSync()!);
-
-  stdout.write('length: ');
-  double length = double.parse(stdin.readLineSync()!);
-
-  double area = width * length;
-
+  double width = readDouble('width: ');
+  double length = readDouble('length: ');
+  double area = calculateArea(width, length);
   AreaStatus areaStatus = getAreaStatus(area);
   printAreaStatus(areaStatus, area);
+}
+
+double calculateArea(double width, double length) {
+  double area = width * length;
+  return area;
 }
 
 AreaStatus getAreaStatus(double area) {
@@ -48,5 +48,21 @@ void printAreaStatus(AreaStatus areaStatus, double area) {
     case AreaStatus.error:
       print('ERROR: Invalid area in m².');
       break;
+  }
+}
+
+double readDouble(String prompt) {
+  double? value;
+
+  while (true) {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+
+    if (value != null && value >= 0) {
+      return value;
+    } else {
+      print('Error: Please enter a valid number.');
+    }
   }
 }
