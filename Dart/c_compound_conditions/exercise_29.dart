@@ -32,19 +32,19 @@ void printNewSalary(
 
   switch (serviceTimeStatus) {
     case ServiceTimeStatus.newbie:
-      double newbieSalary = calculateRaise(salary, newbiePercentage);
-      newSalary = newbieSalary;
       percentage = newbiePercentage;
+      double newbieSalary = calculateRaise(salary, percentage);
+      newSalary = newbieSalary;
       break;
     case ServiceTimeStatus.senior:
-      double seniorSalary = calculateRaise(salary, 12.5);
-      newSalary = seniorSalary;
       percentage = seniorPercentage;
+      double seniorSalary = calculateRaise(salary, percentage);
+      newSalary = seniorSalary;
       break;
     case ServiceTimeStatus.veteran:
-      double veteranSalary = calculateRaise(salary, 20.0);
-      newSalary = veteranSalary;
       percentage = veteranPercentage;
+      double veteranSalary = calculateRaise(salary, percentage);
+      newSalary = veteranSalary;
       break;
     case ServiceTimeStatus.error:
       print('ERROR.');
@@ -85,7 +85,7 @@ double readDouble(String prompt) {
     if (value != null && value >= 0) {
       return value;
     } else {
-      print('Error: Please enter a valid salary.');
+      print('Error: Please enter a valid number.');
     }
   }
 }
@@ -99,7 +99,7 @@ String readString(String prompt) {
     value = input!;
 
     if (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$'))) {
-      print('Error: Please enter a valid name');
+      print('Error: Please enter a valid name.');
     }
   } while (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$')));
 
