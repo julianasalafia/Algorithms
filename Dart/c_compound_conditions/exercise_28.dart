@@ -4,6 +4,8 @@
 
 import 'dart:io';
 
+enum AreaStatus { popularLand, masterLand, vipLand, error }
+
 void main() {
   stdout.write('width: ');
   double width = double.parse(stdin.readLineSync()!);
@@ -13,13 +15,38 @@ void main() {
 
   double area = width * length;
 
+  AreaStatus areaStatus = getAreaStatus(area);
+  printAreaStatus(areaStatus, area);
+}
+
+AreaStatus getAreaStatus(double area) {
   if (area >= 0 && area <= 99) {
-    print('Area: $area. \nPOPULAR LAND.');
-  } else if (area >= 100 && area <= 500) {
-    print('Area: $area. \nMASTER LAND.');
-  } else if (area > 500) {
-    print('Area: $area. \nVIP LAND.');
-  } else {
-    print('Invalid.');
+    return AreaStatus.popularLand;
+  }
+
+  if (area >= 100 && area <= 500) {
+    return AreaStatus.masterLand;
+  }
+
+  if (area > 500) {
+    return AreaStatus.vipLand;
+  }
+  return AreaStatus.error;
+}
+
+void printAreaStatus(AreaStatus areaStatus, double area) {
+  switch (areaStatus) {
+    case AreaStatus.popularLand:
+      print('Area: $area. \nPOPULAR LAND.');
+      break;
+    case AreaStatus.masterLand:
+      print('Area: $area. \MASTER LAND.');
+      break;
+    case AreaStatus.vipLand:
+      print('Area: $area. \VIP LAND.');
+      break;
+    case AreaStatus.error:
+      print('ERROR: Invalid area in m².');
+      break;
   }
 }
