@@ -26,7 +26,7 @@ void printNewSalary(
   double? newSalary;
   double? percentage;
 
-  double newbiePercentage = 3.5;
+  double newbiePercentage = 3;
   double seniorPercentage = 12.5;
   double veteranPercentage = 20;
 
@@ -59,7 +59,7 @@ ServiceTimeStatus getServiceTimeStatus(double serviceTime) {
     return ServiceTimeStatus.newbie;
   }
 
-  if (serviceTime >= 4 && serviceTime <= 9) {
+  if (serviceTime > 3 && serviceTime < 10) {
     return ServiceTimeStatus.senior;
   }
 
