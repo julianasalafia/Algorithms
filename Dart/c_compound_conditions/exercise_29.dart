@@ -7,12 +7,18 @@ import 'dart:io';
 enum ServiceTimeStatus { newbie, senior, veteran, error }
 
 void main() {
-  String name = readString('name: ').capitalize();
-  double salary = readDouble('salary: ');
-  double serviceTime = readDouble('service time: ');
+  String answer = 'yes';
 
-  ServiceTimeStatus serviceTimeStatus = getServiceTimeStatus(serviceTime);
-  printNewSalary(serviceTimeStatus, salary, name);
+  while (answer == 'yes') {
+    String name = readString('name: ').capitalize();
+    double salary = readDouble('salary: ');
+    double serviceTime = readDouble('service time: ');
+
+    ServiceTimeStatus serviceTimeStatus = getServiceTimeStatus(serviceTime);
+    printNewSalary(serviceTimeStatus, salary, name);
+
+    answer = readString('do you want to try again? ').toLowerCase();
+  }
 }
 
 void printNewSalary(
