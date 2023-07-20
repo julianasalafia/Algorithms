@@ -18,7 +18,7 @@ In this repository, you will find the 100 exercises given in Gustavo Guanabara's
 ## Dart:
 - [01 - Basic Sequences](https://github.com/julianasalafia/Algorithms/tree/master/Dart/a_basic_control_structure)
 - [02 - Basic Conditions](https://github.com/julianasalafia/Algorithms/tree/master/Dart/b_basic_conditions)
-- [03 - Compound Conditions]()
+- [03 - Compound Conditions](https://github.com/julianasalafia/Algorithms/tree/master/Dart/c_compound_conditions)
 - [04 - While Loop]()
 - [05 - While with Flag]()
 - [06 - Repeat..Until loop]()
