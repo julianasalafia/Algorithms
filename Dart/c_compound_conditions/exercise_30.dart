@@ -6,16 +6,27 @@ import 'dart:io';
 enum TriangleStatus { EQUILATERAL, ISOSCELES, SCALENE, ERROR }
 
 void main() {
-  int a = readInt('A: ');
-  int b = readInt('B: ');
-  int c = readInt('C: ');
+  String answer = 'yes';
 
-  TriangleStatus triangleStatus = getTriangleStatus(a, b, c);
-  printTriangleStatus(triangleStatus);
+  while (answer == 'yes') {
+    int a = readInt('A: ');
+    int b = readInt('B: ');
+    int c = readInt('C: ');
+
+    TriangleStatus triangleStatus = getTriangleStatus(a, b, c);
+    printTriangleStatus(triangleStatus);
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 TriangleStatus getTriangleStatus(int a, int b, int c) {
-  if ((a < (b + c)) && (b < (a + c)) && (c < (a + b))) {
+  int sumBC = b + c;
+  int sumAC = a + c;
+  int sumAB = a + b;
+
+  if ((a < sumBC) && (b < sumAC) && (c < sumAB)) {
     if (a == b && b == c) {
       return TriangleStatus.EQUILATERAL;
     } else if (a == b || b == c || a == c) {
