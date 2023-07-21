@@ -3,53 +3,127 @@
 import 'dart:io';
 import 'dart:math';
 
-void main() {
-  late String playerChoice;
-  late String computerChoice;
+enum GameStatus { ROCK, PAPER, SCISSORS, TIE, ERROR }
 
+void main() {
   stdout.write('choose an option: \n1) rock \n2) paper \n3)scissors \n:: ');
   int playerOption = int.parse(stdin.readLineSync()!);
   int computerOption = Random().nextInt(3) + 1;
 
+  print(getGameStatus(playerOption, computerOption));
+  printGameResult(playerOption, computerOption);
+}
+
+Map<String, GameStatus> getGameStatus(int playerOption, int computerOption) {
   if (playerOption == 1 && computerOption == 3) {
-    playerChoice = 'rock';
-    computerChoice = 'scissors';
+    return {
+      'playerChoice': GameStatus.ROCK,
+      'computerChoice': GameStatus.SCISSORS,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player wins.');
-  } else if (playerOption == 1 && computerOption == 2) {
-    playerChoice = 'rock';
-    computerChoice = 'paper';
+  if (playerOption == 1 && computerOption == 2) {
+    return {
+      'playerChoice': GameStatus.ROCK,
+      'computerChoice': GameStatus.PAPER,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player looses.');
-  } else if (playerOption == 2 && computerOption == 1) {
-    playerChoice = 'paper';
-    computerChoice = 'rock';
+  if (playerOption == 2 && computerOption == 1) {
+    return {
+      'playerChoice': GameStatus.PAPER,
+      'computerChoice': GameStatus.ROCK,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player wins.');
-  } else if (playerOption == 2 && computerOption == 3) {
-    playerChoice = 'paper';
-    computerChoice = 'scissors';
+  if (playerOption == 2 && computerOption == 3) {
+    return {
+      'playerChoice': GameStatus.PAPER,
+      'computerChoice': GameStatus.SCISSORS,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player looses.');
-  } else if (playerOption == 3 && computerOption == 2) {
-    playerChoice = 'scissors';
-    computerChoice = 'paper';
+  if (playerOption == 3 && computerOption == 2) {
+    return {
+      'playerChoice': GameStatus.SCISSORS,
+      'computerChoice': GameStatus.PAPER,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player wins.');
-  } else if (playerOption == 3 && computerOption == 1) {
-    playerChoice = 'scissors';
-    computerChoice = 'rock';
+  if (playerOption == 3 && computerOption == 1) {
+    return {
+      'playerChoice': GameStatus.SCISSORS,
+      'computerChoice': GameStatus.ROCK,
+    };
+  }
 
-    print('Player: $playerChoice\nComputer: $computerChoice');
-    print('Player loses.');
-  } else if (playerOption == computerOption) {
-    print('Tie.');
+  if (playerOption == computerOption) {
+    return {
+      'playerChoice': GameStatus.TIE,
+      'computerChoice': GameStatus.TIE,
+    };
   } else {
-    print('Invalid.');
+    return {
+      'playerChoice': GameStatus.ERROR,
+      'computerChoice': GameStatus.ERROR,
+    };
+  }
+}
+
+void printGameResult(int playerOption, int computerOption) {
+  Map<String, GameStatus> gameStatus =
+      getGameStatus(playerOption, computerOption);
+
+  GameStatus? playerChoice = gameStatus['playerChoice'];
+  GameStatus? computerChoice = gameStatus['computerChoice'];
+
+  switch (playerChoice) {
+    case GameStatus.ROCK:
+      switch (computerChoice) {
+        case GameStatus.SCISSORS:
+          print('You win!');
+          break;
+        case GameStatus.PAPER:
+          print('You lose!');
+          break;
+        case GameStatus.ROCK:
+          print('It\'s a tie!');
+          break;
+        default:
+          print('Error');
+      }
+      break;
+    case GameStatus.PAPER:
+      switch (computerChoice) {
+        case GameStatus.ROCK:
+          print('You win!');
+          break;
+        case GameStatus.SCISSORS:
+          print('You lose!');
+          break;
+        case GameStatus.PAPER:
+          print('It\'s a tie!');
+          break;
+        default:
+          print('Error');
+      }
+      break;
+    case GameStatus.SCISSORS:
+      switch (computerChoice) {
+        case GameStatus.PAPER:
+          print('You win!');
+          break;
+        case GameStatus.ROCK:
+          print('You lose!');
+          break;
+        case GameStatus.SCISSORS:
+          print('It\'s a tie!');
+          break;
+        default:
+          print('Error');
+      }
+      break;
+    default:
+      print('Error');
   }
 }
