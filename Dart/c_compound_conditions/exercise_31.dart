@@ -86,7 +86,7 @@ void printGameResult(int playerOption, int computerOption) {
   GameStatus? computerChoice = gameStatus['computerChoice'];
 
   if (playerChoice == GameStatus.TIE) {
-    print('It\'s a tie!');
+    print('PLAYER: $playerChoice / COMPUTER: $computerChoice \nIt\'s a tie!');
     return;
   }
 
@@ -94,13 +94,15 @@ void printGameResult(int playerOption, int computerOption) {
     case GameStatus.ROCK:
       switch (computerChoice) {
         case GameStatus.SCISSORS:
-          print('You win!');
+          print('PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou win!');
           break;
         case GameStatus.PAPER:
-          print('You lose!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou lose!');
           break;
         case GameStatus.ROCK:
-          print('It\'s a tie!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \n It\'s a tie!');
           break;
         default:
           print('Error');
@@ -109,13 +111,15 @@ void printGameResult(int playerOption, int computerOption) {
     case GameStatus.PAPER:
       switch (computerChoice) {
         case GameStatus.ROCK:
-          print('You win!');
+          print('PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou win!');
           break;
         case GameStatus.SCISSORS:
-          print('You lose!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou lose!');
           break;
         case GameStatus.PAPER:
-          print('It\'s a tie!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \nIt\'s a tie!');
           break;
         default:
           print('Error');
@@ -124,13 +128,15 @@ void printGameResult(int playerOption, int computerOption) {
     case GameStatus.SCISSORS:
       switch (computerChoice) {
         case GameStatus.PAPER:
-          print('You win!');
+          print('PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou win!');
           break;
         case GameStatus.ROCK:
-          print('You lose!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \nYou lose!');
           break;
         case GameStatus.SCISSORS:
-          print('It\'s a tie!');
+          print(
+              'PLAYER: $playerChoice / COMPUTER: $computerChoice \nIt\'s a tie!');
           break;
         default:
           print('Error');
