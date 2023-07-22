@@ -5,15 +5,32 @@ import 'dart:math';
 
 void main() {
   int computerDraw = Random().nextInt(5) + 1;
-
-  stdout.write('Type a number between 1 and 5: ');
-  int playerChoice = int.parse(stdin.readLineSync()!);
+  int playerChoice = readInt('Type a number between 1 and 5: ');
 
   if (playerChoice != computerDraw) {
-    print('Number: $playerChoice \nDrawn value: $computerDraw.');
+    printMessage(playerChoice, computerDraw);
   }
 
   if (playerChoice == computerDraw) {
-    print('Number: $playerChoice \nDrawn value: $computerDraw.');
+    printMessage(playerChoice, computerDraw);
   }
 }
+
+int readInt(String prompt) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+
+    if (value == null || value < 0) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null || value < 0);
+
+  return value;
+}
+
+void printMessage(int playerChoice, int computerDraw) =>
+    print('Number: $playerChoice \nDrawn value: $computerDraw.');
