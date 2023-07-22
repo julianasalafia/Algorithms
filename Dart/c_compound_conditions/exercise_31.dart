@@ -6,12 +6,20 @@ import 'dart:math';
 enum GameStatus { ROCK, PAPER, SCISSORS, TIE, ERROR }
 
 void main() {
-  stdout.write('choose an option: \n1) rock \n2) paper \n3)scissors \n:: ');
-  int playerOption = int.parse(stdin.readLineSync()!);
-  int computerOption = Random().nextInt(3) + 1;
+  String answer = 'yes';
 
-  print(getGameStatus(playerOption, computerOption));
-  printGameResult(playerOption, computerOption);
+  while (answer == 'yes') {
+    int playerOption =
+        readInt('choose an option: \n1) rock \n2) paper \n3)scissors \n:: ');
+
+    int computerOption = Random().nextInt(3) + 1;
+
+    getGameStatus(playerOption, computerOption);
+    printGameResult(playerOption, computerOption);
+
+    stdout.write('do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 Map<String, GameStatus> getGameStatus(int playerOption, int computerOption) {
@@ -77,6 +85,11 @@ void printGameResult(int playerOption, int computerOption) {
   GameStatus? playerChoice = gameStatus['playerChoice'];
   GameStatus? computerChoice = gameStatus['computerChoice'];
 
+  if (playerChoice == GameStatus.TIE) {
+    print('It\'s a tie!');
+    return;
+  }
+
   switch (playerChoice) {
     case GameStatus.ROCK:
       switch (computerChoice) {
@@ -126,4 +139,20 @@ void printGameResult(int playerOption, int computerOption) {
     default:
       print('Error');
   }
+}
+
+int readInt(String prompt) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+
+    if (value == null || value < 1 || value > 3) {
+      print('Error: Please enter a valid number');
+    }
+  } while (value == null || value < 1 || value > 3);
+
+  return value;
 }
