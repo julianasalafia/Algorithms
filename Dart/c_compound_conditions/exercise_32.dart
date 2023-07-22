@@ -4,15 +4,16 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  int computerDraw = Random().nextInt(5) + 1;
-  int playerChoice = readInt('Type a number between 1 and 5: ');
+  String answer = 'yes';
 
-  if (playerChoice != computerDraw) {
-    printMessage(playerChoice, computerDraw);
-  }
+  while (answer == 'yes') {
+    int computerDraw = Random().nextInt(5) + 1;
+    int playerChoice = readInt('Type a number between 1 and 5: ');
 
-  if (playerChoice == computerDraw) {
     printMessage(playerChoice, computerDraw);
+
+    stdout.write('\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
   }
 }
 
@@ -24,13 +25,19 @@ int readInt(String prompt) {
     String? input = stdin.readLineSync();
     value = int.tryParse(input!);
 
-    if (value == null || value < 0) {
-      print('Error: Please enter a valid number');
+    if (value == null || value < 1 || value > 5) {
+      print('Error: Please enter a valid number.');
     }
-  } while (value == null || value < 0);
+  } while (value == null || value < 1 || value > 5);
 
   return value;
 }
 
-void printMessage(int playerChoice, int computerDraw) =>
-    print('Number: $playerChoice \nDrawn value: $computerDraw.');
+void printMessage(int playerChoice, int computerDraw) {
+  if (computerDraw == playerChoice) {
+    print(
+        'YOU GUESSED IT!\nNumber: $playerChoice — Drawn value: $computerDraw.');
+  } else {
+    print('WRONG GUESS!\nNumber: $playerChoice — Drawn value: $computerDraw.');
+  }
+}
