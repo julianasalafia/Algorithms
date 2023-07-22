@@ -4,6 +4,8 @@
 
 import 'dart:io';
 
+enum LoanStatus { approved, refused }
+
 const percentage = 30;
 
 void main() {
@@ -14,19 +16,29 @@ void main() {
   double monthlyPayment = calculateMonthlyPayment(homePrice, yearsPayment);
   double loanLimit = calculateLoanLimit(buyerSalary);
 
-  if (monthlyPayment <= loanLimit) {
-    print('------------- APPROVED -------------');
-    print('Limit: R\$$loanLimit');
-    print('Salary: R\$$buyerSalary');
-    print('Month Payment: R\$$monthlyPayment');
-    print('----------------------------------------');
+  LoanStatus status = setLoanStatus(monthlyPayment, loanLimit);
+  printLoanStatus(status, loanLimit, buyerSalary, monthlyPayment);
+}
+
+void printLoanStatus(LoanStatus status, double loanLimit, double buyerSalary,
+    double monthlyPayment) {
+  String approvedMessage = '------------- APPROVED -------------';
+  String deniedMessage = '-------------- DENIED --------------';
+  String divisor = '------------------------------------';
+  String message =
+      'Limit: U\$${loanLimit.toStringAsFixed(2)} \nSalary: U\$${buyerSalary.toStringAsFixed(2)}\nMonth Payment: U\$${monthlyPayment.toStringAsFixed(2)}';
+
+  if (status == LoanStatus.approved) {
+    print('$approvedMessage \n $message \n$divisor');
   } else {
-    print('------------- REFUSED -------------');
-    print('Limit: R\$$loanLimit');
-    print('Salary: R\$$buyerSalary');
-    print('Month Payment: R\$$monthlyPayment');
-    print('----------------------------------------');
+    print('$deniedMessage \n$message \n$divisor');
   }
+}
+
+LoanStatus setLoanStatus(double monthlyPayment, double loanLimit) {
+  LoanStatus status =
+      monthlyPayment <= loanLimit ? LoanStatus.approved : LoanStatus.refused;
+  return status;
 }
 
 double calculateLoanLimit(double buyerSalary) {
