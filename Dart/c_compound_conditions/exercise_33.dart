@@ -11,8 +11,8 @@ void main() {
   double buyerSalary = readDouble('buyer\'s salary: ');
   double yearsPayment = readDouble('payment years: ');
 
-  double monthlyPayment = homePrice / (yearsPayment * 12);
-  double loanLimit = (buyerSalary * percentage) / 100;
+  double monthlyPayment = calculateMonthlyPayment(homePrice, yearsPayment);
+  double loanLimit = calculateLoanLimit(buyerSalary);
 
   if (monthlyPayment <= loanLimit) {
     print('------------- APPROVED -------------');
@@ -27,6 +27,16 @@ void main() {
     print('Month Payment: R\$$monthlyPayment');
     print('----------------------------------------');
   }
+}
+
+double calculateLoanLimit(double buyerSalary) {
+  double loanLimit = (buyerSalary * percentage) / 100;
+  return loanLimit;
+}
+
+double calculateMonthlyPayment(double homePrice, double yearsPayment) {
+  double monthlyPayment = homePrice / (yearsPayment * 12);
+  return monthlyPayment;
 }
 
 double readDouble(String prompt) {
