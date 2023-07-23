@@ -11,11 +11,18 @@ import 'dart:io';
 enum BMICategory { UNDERWEIGHT, HEALTHY, OVERWEIGHT, OBESE, EXTREMELY_OBESE }
 
 void main() {
-  double height = readDouble('height: ');
-  double weight = readDouble('weight: ');
+  String answer = 'yes';
 
-  double bmi = calculateBMI(weight, height);
-  bmiResults(bmi);
+  while (answer == 'yes') {
+    double height = readDouble('height: ');
+    double weight = readDouble('weight: ');
+
+    double bmi = calculateBMI(weight, height);
+    bmiResults(bmi);
+
+    stdout.write('\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 void bmiResults(double bmi) {
@@ -43,7 +50,7 @@ double calculateBMI(double weight, double height) {
 void message(double bmi, BMICategory category) {
   print('----------------------------------------');
   print('CATEGORY: ${category.toString().split('.').last}');
-  print('BMI: $bmi');
+  print('BMI: ${bmi.toStringAsFixed(1)}');
   print('----------------------------------------');
 }
 
