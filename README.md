@@ -3,6 +3,8 @@
 
 In this repository, you will find the 100 exercises given in Gustavo Guanabara's Programming Logic Course executed in Kotlin and Dart. You can find the original file in [here](https://www.cursoemvideo.com/wp-content/uploads/2019/08/exercicios-algoritmos.pdf). Translated with ChatGPT.
 
+**EDIT:** When I first started the Kotlin exercises, I was learning algorithms for the first time. If you want to see how I improved over time, it would be nice to compare my work in Kotlin with my work in Dart - that’s where the magic happens.
+
 ## Kotlin:
 - [01 - Basic Sequences](https://github.com/julianasalafia/Algorithms/tree/master/Kotlin/src/main/kotlin/a_basic_control_structures)
 - [02 - Basic Conditions](https://github.com/julianasalafia/Algorithms/tree/master/Kotlin/src/main/kotlin/b_basic_conditions)
