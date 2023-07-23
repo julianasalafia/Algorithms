@@ -8,6 +8,8 @@
 
 import 'dart:io';
 
+enum BMICategory { UNDERWEIGHT, HEALTHY, OVERWEIGHT, OBESE, EXTREMELY_OBESE }
+
 void main() {
   double height = readDouble('height: ');
   double weight = readDouble('weight: ');
@@ -17,21 +19,20 @@ void main() {
 }
 
 void bmiResults(double bmi) {
+  BMICategory category;
+
   if (bmi >= 10 && bmi < 18.5) {
-    message(bmi, 'UNDERWEIGHT');
+    category = BMICategory.UNDERWEIGHT;
+  } else if (bmi >= 18.5 && bmi < 25) {
+    category = BMICategory.HEALTHY;
+  } else if (bmi >= 25 && bmi < 30) {
+    category = BMICategory.OVERWEIGHT;
+  } else if (bmi >= 30 && bmi < 40) {
+    category = BMICategory.OBESE;
+  } else {
+    category = BMICategory.EXTREMELY_OBESE;
   }
-  if (bmi >= 18.5 && bmi < 25) {
-    message(bmi, 'HEALTHY');
-  }
-  if (bmi >= 25 && bmi < 30) {
-    message(bmi, 'OVERWEIGHT');
-  }
-  if (bmi >= 30 && bmi < 40) {
-    message(bmi, 'OBESE');
-  }
-  if (bmi >= 40) {
-    message(bmi, 'EXTREMELY OBESE');
-  }
+  message(bmi, category);
 }
 
 double calculateBMI(double weight, double height) {
@@ -39,9 +40,9 @@ double calculateBMI(double weight, double height) {
   return weight / (height * height);
 }
 
-String? message(double bmi, String bmiCategory) {
+void message(double bmi, BMICategory category) {
   print('----------------------------------------');
-  print('CATEGORY: $bmiCategory');
+  print('CATEGORY: ${category.toString().split('.').last}');
   print('BMI: $bmi');
   print('----------------------------------------');
 }
