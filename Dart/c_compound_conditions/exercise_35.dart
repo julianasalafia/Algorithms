@@ -15,15 +15,22 @@ const double perDayPopular = 90.0;
 const double perDayLuxury = 150.0;
 
 void main() {
-  int optionCar =
-      readInt('which car do you want? \n1) popular car \n2) luxury car \n:: ');
+  String answer = 'yes';
 
-  int days = readInt('rental days: ');
-  int km = readInt('distance travelled: ');
+  while (answer == 'yes') {
+    int optionCar = readInt(
+        'which car do you want? \n1) popular car \n2) luxury car \n:: ');
 
-  CarStatus category = setCarCategory(optionCar);
-  double price = setPrice(days, km, category);
-  message(category, days, km, price);
+    int days = readInt('rental days: ');
+    int km = readInt('distance travelled: ');
+
+    CarStatus category = setCarCategory(optionCar);
+    double price = setPrice(days, km, category);
+    message(category, days, km, price);
+
+    stdout.write('\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 double setPrice(int days, int km, CarStatus category) {
