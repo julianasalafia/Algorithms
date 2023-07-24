@@ -10,18 +10,27 @@ import 'dart:io';
 
 enum ActivityStatus { LIGHT, MODERATE, HEAVY }
 
-void main() {
-  stdout.write('How many hours of physical activity did you had in a month? ');
-  double hoursOfActivity = double.parse(stdin.readLineSync()!);
+const earnedBonus = 0.05;
 
-  ActivityStatus? activityStatus = setActivityStatus(hoursOfActivity);
-  List<double> bonus = calculateBonus(activityStatus!, hoursOfActivity);
-  message(activityStatus, hoursOfActivity, bonus);
+void main() {
+  String answer = 'yes';
+
+  while (answer == 'yes') {
+    double hoursOfActivity = readDouble(
+        'How many hours of physical activity did you had in a month? ');
+    ActivityStatus? activityStatus = setActivityStatus(hoursOfActivity);
+    List<double> bonus =
+        calculateBonus(activityStatus!, hoursOfActivity, earnedBonus);
+    message(activityStatus, hoursOfActivity, bonus);
+
+    stdout.write('\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
-List<double> calculateBonus(ActivityStatus category, double hoursOfActivity) {
+List<double> calculateBonus(
+    ActivityStatus category, double hoursOfActivity, double bonus) {
   double points;
-  double bonus = 0.05;
 
   switch (category) {
     case ActivityStatus.LIGHT:
@@ -35,30 +44,43 @@ List<double> calculateBonus(ActivityStatus category, double hoursOfActivity) {
       break;
   }
   points = hoursOfActivity * points;
-  bonus = points * 0.05;
+  bonus = points * bonus;
 
   return [points, bonus];
 }
 
 ActivityStatus? setActivityStatus(double hoursOfActivity) {
-  ActivityStatus? activityStatus;
-
   if (hoursOfActivity >= 0 && hoursOfActivity < 10) {
-    return activityStatus = ActivityStatus.LIGHT;
+    return ActivityStatus.LIGHT;
   }
 
   if (hoursOfActivity >= 10 && hoursOfActivity < 20) {
-    return activityStatus = ActivityStatus.MODERATE;
+    return ActivityStatus.MODERATE;
   }
 
   if (hoursOfActivity >= 20) {
-    return activityStatus = ActivityStatus.HEAVY;
+    return ActivityStatus.HEAVY;
   }
-  return activityStatus;
 }
 
 void message(ActivityStatus? activityStatus, double hoursOfActivity,
     List<double> bonus) {
   print(
       '${activityStatus.toString().split('.').last}: You did $hoursOfActivity hours of physical activity and earned ${bonus.first} points and US\$${bonus.last.toStringAsFixed(2)}.');
+}
+
+double readDouble(String prompt) {
+  double? value;
+
+  while (true) {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+
+    if (value != null && value >= 0) {
+      return value;
+    } else {
+      print('Error: Please enter a valid number.');
+    }
+  }
 }
