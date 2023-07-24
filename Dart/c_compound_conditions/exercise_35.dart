@@ -14,6 +14,15 @@ enum CarStatus { POPULAR, LUXURY }
 const double perDayPopular = 90.0;
 const double perDayLuxury = 150.0;
 
+const double popularPriceUpTo100 = 0.20;
+const double luxuryPriceUpTo100 = 0.10;
+
+const double popularPriceAbove100 = 0.30;
+const double luxuryPriceAbove100 = 0.25;
+
+const int popularLimit = 100;
+const int luxuryLimit = 200;
+
 void main() {
   String answer = 'yes';
 
@@ -38,17 +47,17 @@ double setPrice(int days, int km, CarStatus category) {
 
   switch (category) {
     case CarStatus.POPULAR:
-      if (km <= 100) {
-        price = (days * perDayPopular) + (km * 0.20);
+      if (km <= popularLimit) {
+        price = (days * perDayPopular) + (km * popularPriceUpTo100);
       } else {
-        price = (days * perDayPopular) + (km * 0.10);
+        price = (days * perDayPopular) + (km * popularPriceAbove100);
       }
       break;
     case CarStatus.LUXURY:
-      if (km <= 200) {
-        price = (days * perDayLuxury) + (km * 0.30);
+      if (km <= luxuryLimit) {
+        price = (days * perDayLuxury) + (km * luxuryPriceUpTo100);
       } else {
-        price = (days * perDayLuxury) + (km * 0.25);
+        price = (days * perDayLuxury) + (km * luxuryPriceAbove100);
       }
       break;
   }
