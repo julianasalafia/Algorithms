@@ -12,35 +12,44 @@ import 'dart:io';
 enum CarStatus { POPULAR, LUXURY }
 
 void main() {
-  late double price;
-
   int optionCar =
       readInt('which car do you want? \n1) popular car \n2) luxury car \n:: ');
 
   int days = readInt('rental days: ');
   int km = readInt('distance travelled: ');
 
+  CarStatus? category = setCarCategory(optionCar);
+  double price = setPrice(days, km);
+  message(category!, days, km, price);
+}
+
+double setPrice(int days, int km) {
+  double price;
+
+  if (km <= 100) {
+    price = km * 0.20;
+  } else {
+    price = km * 0.10;
+  }
+  return price;
+}
+
+CarStatus? setCarCategory(int optionCar) {
+  CarStatus? category;
+
   if (optionCar == 1) {
-    if (km <= 100) {
-      price = km * 0.20;
-    } else {
-      price = km * 0.10;
-    }
+    category = CarStatus.POPULAR;
   }
 
   if (optionCar == 2) {
-    if (km <= 100) {
-      price = km * 0.30;
-    } else {
-      price = km * 0.25;
-    }
+    category = CarStatus.LUXURY;
   }
+  return category;
+}
 
-  print(price);
-
-  if (optionCar != 1 && optionCar != 2) {
-    print('error');
-  }
+void message(CarStatus category, int days, int km, double price) {
+  print(
+      'category: ${category.toString().split('.').last} — km: $km — days: $days — price US\$: ${price.toStringAsFixed(2)}');
 }
 
 int readInt(String prompt) {
