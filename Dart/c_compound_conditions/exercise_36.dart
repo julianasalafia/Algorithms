@@ -15,11 +15,11 @@ void main() {
   double hoursOfActivity = double.parse(stdin.readLineSync()!);
 
   ActivityStatus? activityStatus = setActivityStatus(hoursOfActivity);
-  double bonus = calculateBonus(activityStatus!, hoursOfActivity);
+  List<double> bonus = calculateBonus(activityStatus!, hoursOfActivity);
   message(activityStatus, hoursOfActivity, bonus);
 }
 
-double calculateBonus(ActivityStatus category, double hoursOfActivity) {
+List<double> calculateBonus(ActivityStatus category, double hoursOfActivity) {
   double points;
   double bonus = 0.05;
 
@@ -37,7 +37,7 @@ double calculateBonus(ActivityStatus category, double hoursOfActivity) {
   points = hoursOfActivity * points;
   bonus = points * 0.05;
 
-  return bonus;
+  return [points, bonus];
 }
 
 ActivityStatus? setActivityStatus(double hoursOfActivity) {
@@ -57,8 +57,8 @@ ActivityStatus? setActivityStatus(double hoursOfActivity) {
   return activityStatus;
 }
 
-void message(
-    ActivityStatus? activityStatus, double hoursOfActivity, double bonus) {
+void message(ActivityStatus? activityStatus, double hoursOfActivity,
+    List<double> bonus) {
   print(
-      '${activityStatus.toString().split('.').last}: You did $hoursOfActivity hours of physical activity and earned US\$$bonus.');
+      '${activityStatus.toString().split('.').last}: You did $hoursOfActivity hours of physical activity and earned ${bonus.first} points and US\$${bonus.last.toStringAsFixed(2)}.');
 }
