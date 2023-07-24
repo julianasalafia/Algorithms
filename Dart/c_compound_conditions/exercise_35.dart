@@ -39,9 +39,9 @@ double setPrice(int days, int km, CarStatus category) {
       break;
     case CarStatus.LUXURY:
       if (km <= 200) {
-        price = (days + perDayLuxury) + (km * 0.30);
+        price = (days * perDayLuxury) + (km * 0.30);
       } else {
-        price = (days + perDayLuxury) + (km * 0.25);
+        price = (days * perDayLuxury) + (km * 0.25);
       }
       break;
   }
