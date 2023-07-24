@@ -49,16 +49,7 @@ double setPrice(int days, int km, CarStatus category) {
 }
 
 CarStatus setCarCategory(int optionCar) {
-  late CarStatus category;
-
-  if (optionCar == 1) {
-    category = CarStatus.POPULAR;
-  }
-
-  if (optionCar == 2) {
-    category = CarStatus.LUXURY;
-  }
-  return category;
+  return (optionCar == 1) ? CarStatus.POPULAR : CarStatus.LUXURY;
 }
 
 void message(CarStatus category, int days, int km, double price) {
