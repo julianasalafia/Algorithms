@@ -30,21 +30,15 @@ void main() {
 
 List<double> calculateBonus(
     ActivityStatus category, double hoursOfActivity, double bonus) {
-  double points;
+  const pointsMap = {
+    ActivityStatus.LIGHT: 2,
+    ActivityStatus.MODERATE: 5,
+    ActivityStatus.HEAVY: 10,
+  };
 
-  switch (category) {
-    case ActivityStatus.LIGHT:
-      points = 2;
-      break;
-    case ActivityStatus.MODERATE:
-      points = 5;
-      break;
-    case ActivityStatus.HEAVY:
-      points = 10;
-      break;
-  }
-  points = hoursOfActivity * points;
-  bonus = points * bonus;
+  double points = pointsMap[category]!.toDouble();
+  points *= hoursOfActivity;
+  bonus *= points;
 
   return [points, bonus];
 }
