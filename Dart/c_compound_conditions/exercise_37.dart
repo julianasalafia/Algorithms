@@ -8,45 +8,69 @@
 
 import 'dart:io';
 
+enum GenderStatus { MALE, FEMALE }
+
 void main() {
   double currentSalary = readDouble('current salary: ');
   double yearsWorking = readDouble('years working at company: ');
-  double genderChosen = readDouble('Gender: \n1) Female \n2) Male \n::');
+  double chosenGender = readDouble('Gender: \n1) Female \n2) Male \n:: ');
 
-  late String gender;
+  GenderStatus gender = setGender(chosenGender);
+  double? times = setSalaryProperties(gender, yearsWorking);
+  double newSalary = calculateTime(yearsWorking, currentSalary, times!);
+  printNewSalary(currentSalary, newSalary, gender);
+}
 
-  double newSalary = currentSalary;
-
-  if (genderChosen == 1) {
-    gender = 'female';
-
-    if (yearsWorking < 15) {
-      newSalary = currentSalary + ((currentSalary * 5) / 100);
-    } else if (yearsWorking >= 15.0 && yearsWorking <= 20.0) {
-      newSalary = currentSalary + ((currentSalary * 12) / 100);
-    } else if (yearsWorking >= 20) {
-      newSalary = currentSalary + ((currentSalary * 23) / 100);
-    } else {
-      print('Invalid.');
-    }
-  }
-
-  if (genderChosen == 2) {
-    gender = 'male';
-
-    if (yearsWorking < 20) {
-      newSalary = currentSalary + ((currentSalary * 3) / 100);
-    } else if (yearsWorking >= 20.0 && yearsWorking <= 30.0) {
-      newSalary = currentSalary + ((currentSalary * 13) / 100);
-    } else if (yearsWorking >= 30) {
-      newSalary = currentSalary + ((currentSalary * 25) / 100);
-    } else {
-      print('Invalid.');
-    }
-  }
-
+void printNewSalary(
+    double currentSalary, double newSalary, GenderStatus gender) {
   return print(
-      'Current salary: U\$$currentSalary \nGender: $gender \nNew salary: U\$$newSalary');
+      'gender: ${gender.toString().split('.').last} \ncurrent salary: U\$${currentSalary.toStringAsFixed(2)} \nnew salary: U\$${newSalary.toStringAsFixed(2)}');
+}
+
+double calculateTime(double yearsWorking, double currentSalary, double times) {
+  return currentSalary + ((currentSalary * times) / 100);
+}
+
+double? setSalaryProperties(GenderStatus gender, double yearsWorking) {
+  double? times;
+
+  switch (gender) {
+    case GenderStatus.FEMALE:
+      if (yearsWorking < 15) {
+        return times = 5;
+      }
+
+      if (yearsWorking >= 15 && yearsWorking < 20) {
+        return times = 12;
+      }
+
+      if (yearsWorking >= 20) {
+        return times = 23;
+      }
+      break;
+
+    case GenderStatus.MALE:
+      if (yearsWorking < 20) {
+        return times = 3;
+      }
+
+      if (yearsWorking >= 20 && yearsWorking < 30) {
+        return times = 13;
+      }
+
+      if (yearsWorking >= 30) {
+        return times = 25;
+      }
+      break;
+  }
+  return times;
+}
+
+GenderStatus setGender(double chosenGender) {
+  GenderStatus gender =
+      chosenGender <= 1 ? GenderStatus.FEMALE : GenderStatus.MALE;
+
+  return gender;
 }
 
 double readDouble(String prompt) {
