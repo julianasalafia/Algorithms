@@ -11,14 +11,20 @@ import 'dart:io';
 enum GenderStatus { MALE, FEMALE }
 
 void main() {
-  double currentSalary = readDouble('current salary: ');
-  double yearsWorking = readDouble('years working at company: ');
-  double chosenGender = readDouble('Gender: \n1) Female \n2) Male \n:: ');
+  String answer = 'yes';
+  while (answer == 'yes') {
+    double currentSalary = readDouble('current salary: ');
+    double yearsWorking = readDouble('years working at company: ');
+    double chosenGender = readDouble('Gender: \n1) Female \n2) Male \n:: ');
 
-  GenderStatus gender = setGender(chosenGender);
-  double? times = setSalaryProperties(gender, yearsWorking);
-  double newSalary = calculateTime(yearsWorking, currentSalary, times!);
-  printNewSalary(currentSalary, newSalary, gender);
+    GenderStatus gender = setGender(chosenGender);
+    double? times = setSalaryProperties(gender, yearsWorking);
+    double newSalary = calculateTime(yearsWorking, currentSalary, times!);
+    printNewSalary(currentSalary, newSalary, gender);
+
+    stdout.write('\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
 }
 
 void printNewSalary(
