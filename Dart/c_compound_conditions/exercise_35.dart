@@ -25,15 +25,18 @@ const int luxuryLimit = 200;
 
 void main() {
   String answer = 'yes';
+  late CarStatus? category;
 
   while (answer == 'yes') {
-    int optionCar = readInt(
-        'which car do you want? \n1) popular car \n2) luxury car \n:: ');
+    do {
+      int optionCar = readInt(
+          'which car do you want? \n1) popular car \n2) luxury car \n:: ');
+      category = setCarCategory(optionCar);
+    } while (category == null);
 
     int days = readInt('rental days: ');
     int km = readInt('distance travelled: ');
 
-    CarStatus category = setCarCategory(optionCar);
     double price = setPrice(days, km, category);
     message(category, days, km, price);
 
@@ -64,8 +67,20 @@ double setPrice(int days, int km, CarStatus category) {
   return price;
 }
 
-CarStatus setCarCategory(int optionCar) {
-  return (optionCar == 1) ? CarStatus.POPULAR : CarStatus.LUXURY;
+CarStatus? setCarCategory(int optionCar) {
+  CarStatus? category;
+
+  switch (optionCar) {
+    case 1:
+      category = CarStatus.POPULAR;
+      break;
+    case 2:
+      category = CarStatus.LUXURY;
+      break;
+    default:
+      return null;
+  }
+  return category;
 }
 
 void message(CarStatus category, int days, int km, double price) {
