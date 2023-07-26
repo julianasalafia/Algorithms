@@ -15,9 +15,13 @@ void main() {
   while (answer == 'yes') {
     double currentSalary = readDouble('current salary: ');
     double yearsWorking = readDouble('years working at company: ');
-    double chosenGender = readDouble('Gender: \n1) Female \n2) Male \n:: ');
+    late GenderStatus? gender;
 
-    GenderStatus gender = setGender(chosenGender);
+    do {
+      double chosenGender = readDouble('\nGender: \n1) Female \n2) Male \n:: ');
+      gender = setGender(chosenGender);
+    } while (gender == null);
+
     double? times = setSalaryProperties(gender, yearsWorking);
     double newSalary = calculateTime(yearsWorking, currentSalary, times!);
     printNewSalary(currentSalary, newSalary, gender);
@@ -38,44 +42,44 @@ double calculateTime(double yearsWorking, double currentSalary, double times) {
 }
 
 double? setSalaryProperties(GenderStatus gender, double yearsWorking) {
-  double? times;
+  double? salaryIncreasePercentage;
 
   switch (gender) {
     case GenderStatus.FEMALE:
       if (yearsWorking < 15) {
-        return times = 5;
-      }
-
-      if (yearsWorking >= 15 && yearsWorking < 20) {
-        return times = 12;
-      }
-
-      if (yearsWorking >= 20) {
-        return times = 23;
+        return salaryIncreasePercentage = 5;
+      } else if (yearsWorking >= 15 && yearsWorking < 20) {
+        return salaryIncreasePercentage = 12;
+      } else if (yearsWorking >= 20) {
+        return salaryIncreasePercentage = 23;
       }
       break;
 
     case GenderStatus.MALE:
       if (yearsWorking < 20) {
-        return times = 3;
-      }
-
-      if (yearsWorking >= 20 && yearsWorking < 30) {
-        return times = 13;
-      }
-
-      if (yearsWorking >= 30) {
-        return times = 25;
+        return salaryIncreasePercentage = 3;
+      } else if (yearsWorking >= 20 && yearsWorking < 30) {
+        return salaryIncreasePercentage = 13;
+      } else if (yearsWorking >= 30) {
+        return salaryIncreasePercentage = 25;
       }
       break;
   }
-  return times;
+  return salaryIncreasePercentage;
 }
 
-GenderStatus setGender(double chosenGender) {
-  GenderStatus gender =
-      chosenGender <= 1 ? GenderStatus.FEMALE : GenderStatus.MALE;
-
+GenderStatus? setGender(double chosenGender) {
+  GenderStatus? gender;
+  switch (chosenGender) {
+    case 1:
+      gender = GenderStatus.FEMALE;
+      break;
+    case 2:
+      gender = GenderStatus.MALE;
+      break;
+    default:
+      return null;
+  }
   return gender;
 }
 
