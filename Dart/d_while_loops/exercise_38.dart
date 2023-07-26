@@ -5,11 +5,19 @@ import 'dart:io';
 void main() {
   List<int> vector = [];
   int counter = 6;
+  int maxSize = 11;
 
-  while (counter <= 11) {
+  while (counter <= maxSize) {
     vector.add(counter);
     counter++;
   }
 
-  print('$vector');
+  for (int element in vector) {
+    if (element < maxSize) {
+      stdout.write('$element, ');
+    } else {
+      stdout.write('$element. ');
+    }
+  }
+  print('finished!');
 }
