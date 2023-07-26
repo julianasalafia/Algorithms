@@ -3,11 +3,13 @@
 import 'dart:io';
 
 void main() {
+  List<int> vector = [];
   int counter = 6;
 
-  while (counter < 12) {
-    stdout.write('$counter, ');
+  while (counter <= 11) {
+    vector.add(counter);
     counter++;
   }
-  print('finished!');
+
+  print('$vector');
 }
