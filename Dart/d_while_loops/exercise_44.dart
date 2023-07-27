@@ -5,19 +5,40 @@
 import 'dart:io';
 
 void main() {
-  List<int> vector = [];
-  int firstValue = readInt('first value: ');
-  int lastValue = readInt('last value: ');
-  int increment = readInt('increment: ');
+  String answer = 'yes';
+  while (answer == 'yes') {
+    List<int> vector = [];
+    int firstValue = readInt('first value: ');
+    int lastValue = readInt('last value: ');
+    int increment = readInt('increment: ');
 
-  int counter = firstValue;
+    int counter = firstValue;
 
-  while (counter <= lastValue) {
-    vector.add(counter);
-    counter += increment;
+    if (firstValue > lastValue) {
+      while (counter >= lastValue) {
+        vector.add(counter);
+        counter -= increment;
+      }
+    } else if (lastValue > firstValue) {
+      while (counter <= lastValue) {
+        vector.add(counter);
+        counter += increment;
+      }
+    }
+
+    for (int element in vector) {
+      if (element != vector.last) {
+        stdout.write('$element, ');
+      } else {
+        stdout.write('$element. ');
+      }
+    }
+
+    print('finished!');
+
+    stdout.write('Do you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
   }
-
-  print(vector);
 }
 
 int readInt(String prompt) {
