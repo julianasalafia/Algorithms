@@ -14,33 +14,29 @@ void main() {
 
 void generateNumbers(int times, int maxSize) {
   late int number;
-  late int greaterThanFive = 0;
-  late int dividedByThree = 0;
 
   List<int> numbersList = [];
   List<int> greaterThanFiveList = [];
   List<int> dividedByThreeList = [];
 
-  for (int i = 0; i < times; i++) {
+  while (numbersList.length < times) {
     number = Random().nextInt(maxSize);
     numbersList.add(number);
 
     if (number > 5) {
       greaterThanFiveList.add(number);
-      greaterThanFive++;
     }
 
     if (number % 3 == 0) {
       dividedByThreeList.add(number);
-      dividedByThree++;
     }
   }
-  message(numbersList, greaterThanFiveList, dividedByThreeList, greaterThanFive,
-      dividedByThree);
+
+  message(numbersList, greaterThanFiveList, dividedByThreeList);
 }
 
 void message(List<int> numbersList, List<int> greaterThanFiveList,
-    List<int> dividedByThreeList, int greaterThanFive, int dividedByThree) {
+    List<int> dividedByThreeList) {
   return print(
-      'Sorted numbers: ${numbersList.join(', ')}. \nThere are $greaterThanFive numbers greater than five: ${greaterThanFiveList.join(', ')}. \nThere are $dividedByThree numbers that can be divided by three: ${dividedByThreeList.join(', ')}.');
+      'Sorted numbers: ${numbersList.join(', ')}. \nThere are ${greaterThanFiveList.length} numbers greater than five: ${greaterThanFiveList.join(', ')}. \nThere are ${dividedByThreeList.length} numbers that can be divided by three: ${dividedByThreeList.join(', ')}.');
 }
