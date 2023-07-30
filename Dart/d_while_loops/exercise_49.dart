@@ -13,15 +13,21 @@ void oddOrEven(List<int> vector) {
   int odd = 0;
   int even = 0;
 
+  List<int> oddNumbers = [];
+  List<int> evenNumbers = [];
+
   for (int number in vector) {
     if (number % 2 == 0) {
       even++;
+      evenNumbers.add(number);
     } else {
       odd++;
+      oddNumbers.add(number);
     }
   }
 
-  print('There are $even even numbers and $odd odd numbers.');
+  print(
+      '----------------------------------------\nThere are $even even numbers: ${evenNumbers.join(', ')}. \nThere are $odd odd numbers: ${oddNumbers.join(', ')}. \n----------------------------------------');
 }
 
 List<int> readNumbers(int maxSize) {
