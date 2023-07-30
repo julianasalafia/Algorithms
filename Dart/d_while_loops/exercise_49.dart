@@ -25,9 +25,15 @@ void oddOrEven(List<int> vector) {
       oddNumbers.add(number);
     }
   }
+  message(even, odd, oddNumbers, evenNumbers);
+}
 
-  print(
-      '----------------------------------------\nThere are $even even numbers: ${evenNumbers.join(', ')}. \nThere are $odd odd numbers: ${oddNumbers.join(', ')}. \n----------------------------------------');
+void message(int even, int odd, List<int> oddNumbers, List<int> evenNumbers) {
+  String divisor = '\n=========================================\n';
+  String message =
+      'There are $even even numbers: ${evenNumbers.join(', ')}. \nThere are $odd odd numbers: ${oddNumbers.join(', ')}.';
+
+  return print('$divisor \n$message \n$divisor');
 }
 
 List<int> readNumbers(int maxSize) {
