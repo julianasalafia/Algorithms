@@ -6,14 +6,14 @@
 
 import 'dart:io';
 
-const maxSize = 2;
+const maxSize = 3;
 
 void main() {
   Map<String, Map<String, int>> personInfo = setPersonInfo();
   Map<String, int> gender = genderCount(personInfo);
 
   print('array: $personInfo');
-  print('men / women :$gender');
+  print('men / women: $gender');
 }
 
 Map<String, Map<String, int>> setPersonInfo() {
@@ -45,19 +45,40 @@ Map<String, int> printQuestion(int number) {
 Map<String, int> genderCount(Map<String, Map<String, int>> info) {
   int men = 0;
   int women = 0;
+  int sumAgeMen = 0;
+  int sumAgeWomen = 0;
+  int sumAgeGroup = 0;
+  int womenOverTwenty = 0;
+  late int averageAgeGroup;
+  late int averageAgeMen;
 
   for (int i = 1; i <= info.length; i++) {
     if (info['PERSON $i']!['gender']! == 1) {
       men++;
+
+      sumAgeMen += info['PERSON $i']!['age']!;
     }
 
     if (info['PERSON $i']!['gender']! == 2) {
       women++;
+      sumAgeWomen += info['PERSON $i']!['age']!;
+
+      if (info['PERSON $i']!['age']! >= 20) {
+        womenOverTwenty++;
+      }
     }
   }
+
+  averageAgeMen = sumAgeMen ~/ men;
+
+  sumAgeGroup = sumAgeWomen + sumAgeMen;
+  averageAgeGroup = sumAgeGroup ~/ 3;
 
   return {
     'men': men,
     'women': women,
+    'averageAgeGroup': averageAgeGroup,
+    'averageAgeMen': averageAgeMen,
+    'womenOverTwenty': womenOverTwenty,
   };
 }
