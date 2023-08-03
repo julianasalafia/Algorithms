@@ -14,13 +14,15 @@ void main() {
   int womenOverTwenty = 0;
   late int averageAgeGroup;
   late int averageAgeMen;
+  late int age;
+  late int gender;
 
   for (int i = 1; i <= 5; i++) {
     print('============= PERSON $i =============');
     stdout.write('what\'s your age? ');
-    int age = int.parse(stdin.readLineSync()!);
+    age = int.parse(stdin.readLineSync()!);
     stdout.write('what\'s your gender? \n1) male 2) female 3) other \n:: ');
-    int gender = int.parse(stdin.readLineSync()!);
+    gender = int.parse(stdin.readLineSync()!);
 
     if (gender == 1) {
       men++;
@@ -41,5 +43,5 @@ void main() {
   averageAgeMen = sumAgeMen ~/ men;
 
   print(
-      'men registered: $men \nwomen registered: $women \naverage age: $averageAgeGroup \naverage age men: $averageAgeMen \nwomenOverTwenty: $womenOverTwenty');
+      'men registered: $men \nwomen registered: $women \naverage age: $averageAgeGroup \naverage age men: $averageAgeMen \nwomen over twenty: $womenOverTwenty');
 }
