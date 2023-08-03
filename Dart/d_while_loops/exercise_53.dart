@@ -6,14 +6,13 @@
 
 import 'dart:io';
 
-const maxSize = 3;
+const maxSize = 5;
 
 void main() {
   Map<String, Map<String, int>> personInfo = setPersonInfo();
-  Map<String, int> gender = genderCount(personInfo);
+  Map<String, dynamic> gender = calculateStatistics(personInfo);
 
-  print('array: $personInfo');
-  print('men / women: $gender');
+  print('statistics: $gender');
 }
 
 Map<String, Map<String, int>> setPersonInfo() {
@@ -42,7 +41,7 @@ Map<String, int> printQuestion(int number) {
   };
 }
 
-Map<String, int> genderCount(Map<String, Map<String, int>> info) {
+Map<String, dynamic> calculateStatistics(Map<String, Map<String, int>> info) {
   int men = 0;
   int women = 0;
   int sumAgeMen = 0;
@@ -72,7 +71,7 @@ Map<String, int> genderCount(Map<String, Map<String, int>> info) {
   averageAgeMen = sumAgeMen ~/ men;
 
   sumAgeGroup = sumAgeWomen + sumAgeMen;
-  averageAgeGroup = sumAgeGroup ~/ 3;
+  averageAgeGroup = sumAgeGroup ~/ info.length;
 
   return {
     'men': men,
