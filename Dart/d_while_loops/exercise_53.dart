@@ -6,42 +6,58 @@
 
 import 'dart:io';
 
+const maxSize = 2;
+
 void main() {
+  Map<String, Map<String, int>> personInfo = setPersonInfo();
+  Map<String, int> gender = genderCount(personInfo);
+
+  print('array: $personInfo');
+  print('men / women :$gender');
+}
+
+Map<String, Map<String, int>> setPersonInfo() {
+  Map<String, Map<String, int>> personInfo = {};
+
+  int counter = 1;
+
+  while (counter <= maxSize) {
+    Map<String, int> getPersonInfo = printQuestion(counter);
+    personInfo.putIfAbsent('PERSON $counter', () => getPersonInfo);
+    counter++;
+  }
+  return personInfo;
+}
+
+Map<String, int> printQuestion(int number) {
+  print('============= PERSON $number =============');
+  stdout.write('what\'s your age? ');
+  int age = int.parse(stdin.readLineSync()!);
+  stdout.write('what\'s your gender? \n1) male 2) female 3) other \n:: ');
+  int gender = int.parse(stdin.readLineSync()!);
+
+  return {
+    'age': age,
+    'gender': gender,
+  };
+}
+
+Map<String, int> genderCount(Map<String, Map<String, int>> info) {
   int men = 0;
   int women = 0;
-  int sumAgeGroup = 0;
-  int sumAgeMen = 0;
-  int womenOverTwenty = 0;
-  late int averageAgeGroup;
-  late int averageAgeMen;
-  late int age;
-  late int gender;
 
-  for (int i = 1; i <= 5; i++) {
-    print('============= PERSON $i =============');
-    stdout.write('what\'s your age? ');
-    age = int.parse(stdin.readLineSync()!);
-    stdout.write('what\'s your gender? \n1) male 2) female 3) other \n:: ');
-    gender = int.parse(stdin.readLineSync()!);
-
-    if (gender == 1) {
+  for (int i = 1; i <= info.length; i++) {
+    if (info['PERSON $i']!['gender']! == 1) {
       men++;
-      sumAgeMen += age;
     }
 
-    if (gender == 2) {
+    if (info['PERSON $i']!['gender']! == 2) {
       women++;
-
-      if (age >= 20) {
-        womenOverTwenty++;
-      }
     }
   }
 
-  sumAgeGroup += age;
-  averageAgeGroup = sumAgeGroup ~/ 5;
-  averageAgeMen = sumAgeMen ~/ men;
-
-  print(
-      'men registered: $men \nwomen registered: $women \naverage age: $averageAgeGroup \naverage age men: $averageAgeMen \nwomen over twenty: $womenOverTwenty');
+  return {
+    'men': men,
+    'women': women,
+  };
 }
