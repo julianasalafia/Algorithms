@@ -9,10 +9,29 @@ import 'dart:io';
 const maxSize = 5;
 
 void main() {
-  Map<String, Map<String, int>> personInfo = setPersonInfo();
-  Map<String, dynamic> gender = calculateStatistics(personInfo);
+  String answer = 'yes';
 
-  print('statistics: $gender');
+  while (answer == 'yes') {
+    Map<String, Map<String, int>> personInfo = setPersonInfo();
+
+    message(personInfo);
+
+    stdout.write('\n\ndo you want to try again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
+  }
+}
+
+void message(Map<String, Map<String, int>> info) {
+  Map<String, dynamic> statistics = calculateStatistics(info);
+  int men = statistics['men'];
+  int women = statistics['women'];
+  int averageAgeGroup = statistics['averageAgeGroup'];
+  int averageAgeMen = statistics['averageAgeMen'];
+  int womenOverTwenty = statistics['womenOverTwenty'];
+  int otherGender = statistics['otherGender'];
+
+  stdout.write(
+      'Registered men: $men. \nRegistered women: $women. \nAverage age of the group: $averageAgeGroup. \nAverage age of men: $averageAgeMen. \nWomen over 20 years old: $womenOverTwenty. \n$otherGender people did not share their gender.');
 }
 
 Map<String, Map<String, int>> setPersonInfo() {
@@ -30,10 +49,9 @@ Map<String, Map<String, int>> setPersonInfo() {
 
 Map<String, int> printQuestion(int number) {
   print('============= PERSON $number =============');
-  stdout.write('what\'s your age? ');
-  int age = int.parse(stdin.readLineSync()!);
-  stdout.write('what\'s your gender? \n1) male 2) female 3) other \n:: ');
-  int gender = int.parse(stdin.readLineSync()!);
+  int age = readInt('what\'s your age? ', 0, 100);
+  int gender =
+      readInt('what\'s your gender? \n1) male 2) female 3) other \n:: ', 1, 3);
 
   return {
     'age': age,
@@ -48,6 +66,7 @@ Map<String, dynamic> calculateStatistics(Map<String, Map<String, int>> info) {
   int sumAgeWomen = 0;
   int sumAgeGroup = 0;
   int womenOverTwenty = 0;
+  int otherGender = 0;
   late int averageAgeGroup;
   late int averageAgeMen;
 
@@ -66,6 +85,10 @@ Map<String, dynamic> calculateStatistics(Map<String, Map<String, int>> info) {
         womenOverTwenty++;
       }
     }
+
+    if (info['PERSON $i']!['gender']! == 3) {
+      otherGender++;
+    }
   }
 
   averageAgeMen = sumAgeMen ~/ men;
@@ -79,5 +102,22 @@ Map<String, dynamic> calculateStatistics(Map<String, Map<String, int>> info) {
     'averageAgeGroup': averageAgeGroup,
     'averageAgeMen': averageAgeMen,
     'womenOverTwenty': womenOverTwenty,
+    'otherGender': otherGender,
   };
+}
+
+int readInt(String prompt, int minValue, int maxValue) {
+  int? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = int.tryParse(input!);
+
+    if (value == null || value < minValue || value > maxValue) {
+      print('\nERROR: Please enter a valid number\n');
+    }
+  } while (value == null || value < minValue || value > maxValue);
+
+  return value;
 }
