@@ -1,30 +1,33 @@
 import 'dart:io';
 import 'dart:math';
 
+enum DrawStatus { ODD, EVEN }
+
 void main() {
-  late int computerDraw;
-  late int playerChoice;
-  int counter = 0;
-  int attempts = 3;
+  Map<String, int> getNumber = getNumbers();
+  DrawStatus status = drawStatus(getNumber);
+  printMessage(status, getNumber);
+}
 
-  do {
-    if (counter < 3) {
-      computerDraw = Random().nextInt(5) + 1;
-      playerChoice = readInt('\nType a number between 1 and 5: ');
-      counter++;
+DrawStatus drawStatus(Map<String, int> getNumber) {
+  DrawStatus drawStatus;
 
-      if (computerDraw != playerChoice && attempts != 1) {
-        attempts--;
-        stdout.write('You have $attempts attempts left. ');
-      }
+  if (getNumber['computerDraw'] == getNumber['playerChoice']) {
+    drawStatus = DrawStatus.EVEN;
+  } else {
+    drawStatus = DrawStatus.ODD;
+  }
+  return drawStatus;
+}
 
-      if (counter == 3) {
-        return stdout.write('You ran out of attempts!\n');
-      }
-    }
+Map<String, int> getNumbers() {
+  int computerDraw = Random().nextInt(5) + 1;
+  int playerChoice = readInt('\nType a number between 1 and 5: ');
 
-    printMessage(playerChoice, computerDraw);
-  } while (computerDraw != playerChoice);
+  return {
+    'computerDraw': computerDraw,
+    'playerChoice': playerChoice,
+  };
 }
 
 int readInt(String prompt) {
@@ -43,12 +46,13 @@ int readInt(String prompt) {
   return value;
 }
 
-void printMessage(int playerChoice, int computerDraw) {
-  if (computerDraw == playerChoice) {
+void printMessage(DrawStatus status, Map<String, int> numbers) {
+  String divider = '============================';
+  if (status == DrawStatus.EVEN) {
     stdout.write(
-        'YOU GUESSED IT!\nNumber: $playerChoice — Drawn value: $computerDraw.\n');
+        '$divider\nYOU GUESSED IT!\nNumber: ${numbers['playerChoice']} — Drawn value: ${numbers['computerDraw']}.\n$divider\n');
   } else {
     stdout.write(
-        'WRONG GUESS!\nNumber: $playerChoice — Drawn value: $computerDraw.\n');
+        '$divider\nWRONG GUESS!\nNumber: ${numbers['playerChoice']} — Drawn value: ${numbers['computerDraw']}.\n$divider\n');
   }
 }
