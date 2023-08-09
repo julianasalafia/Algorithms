@@ -9,30 +9,40 @@ import 'dart:math';
 enum DrawStatus { ODD, EVEN }
 
 void main() {
-  Map<String, int> getNumber = getNumbers();
-  DrawStatus status = drawStatus(getNumber);
-  int attempts = 3;
+  String answer = 'yes';
 
-  while (status == DrawStatus.ODD) {
-    if (attempts == 0) {
-      return stdout.write('You ran out of attempts!');
+  while (answer == 'yes') {
+    Map<String, int> getNumber = getNumbers();
+    DrawStatus status = drawStatus(getNumber);
+    int attempts = 3;
+
+    while (status == DrawStatus.ODD) {
+      if (attempts == 0) {
+        return stdout.write('You ran out of attempts!');
+      }
+
+      printMessage(status, getNumber);
+      printAttempts(attempts);
+
+      getNumber = getNumbers();
+      status = drawStatus(getNumber);
+      attempts--;
     }
-
     printMessage(status, getNumber);
 
-    if (attempts == 1) {
-      stdout.write('You have $attempts more attempt. \n');
-    }
-
-    if (attempts != 0 && attempts != 1) {
-      stdout.write('You have $attempts more attempts. \n');
-    }
-
-    getNumber = getNumbers();
-    status = drawStatus(getNumber);
-    attempts--;
+    stdout.write('\nPlay again? ');
+    answer = stdin.readLineSync()!.toLowerCase();
   }
-  printMessage(status, getNumber);
+}
+
+void printAttempts(int attempts) {
+  if (attempts == 1) {
+    stdout.write('You have $attempts more attempt. \n');
+  }
+
+  if (attempts != 0 && attempts != 1) {
+    stdout.write('You have $attempts more attempts. \n');
+  }
 }
 
 DrawStatus drawStatus(Map<String, int> getNumber) {
