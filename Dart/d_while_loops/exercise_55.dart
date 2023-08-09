@@ -11,6 +11,27 @@ enum DrawStatus { ODD, EVEN }
 void main() {
   Map<String, int> getNumber = getNumbers();
   DrawStatus status = drawStatus(getNumber);
+  int attempts = 3;
+
+  while (status == DrawStatus.ODD) {
+    if (attempts == 0) {
+      return stdout.write('You ran out of attempts!');
+    }
+
+    printMessage(status, getNumber);
+
+    if (attempts == 1) {
+      stdout.write('You have $attempts more attempt. \n');
+    }
+
+    if (attempts != 0 && attempts != 1) {
+      stdout.write('You have $attempts more attempts. \n');
+    }
+
+    getNumber = getNumbers();
+    status = drawStatus(getNumber);
+    attempts--;
+  }
   printMessage(status, getNumber);
 }
 
@@ -26,8 +47,8 @@ DrawStatus drawStatus(Map<String, int> getNumber) {
 }
 
 Map<String, int> getNumbers() {
-  int computerDraw = Random().nextInt(5) + 1;
-  int playerChoice = readInt('\nType a number between 1 and 5: ');
+  int computerDraw = Random().nextInt(10) + 1;
+  int playerChoice = readInt('\nType a number between 1 and 10: ');
 
   return {
     'computerDraw': computerDraw,
@@ -43,21 +64,21 @@ int readInt(String prompt) {
     String? input = stdin.readLineSync();
     value = int.tryParse(input!);
 
-    if (value == null || value < 1 || value > 5) {
+    if (value == null || value < 1 || value > 10) {
       print('Error: Please enter a valid number.');
     }
-  } while (value == null || value < 1 || value > 5);
+  } while (value == null || value < 1 || value > 10);
 
   return value;
 }
 
-void printMessage(DrawStatus status, Map<String, int> numbers) {
+void printMessage(DrawStatus status, Map<String, int> getNumber) {
   String divider = '============================';
   if (status == DrawStatus.EVEN) {
     stdout.write(
-        '$divider\nYOU GUESSED IT!\nNumber: ${numbers['playerChoice']} — Drawn value: ${numbers['computerDraw']}.\n$divider\n');
+        '$divider\nYOU GUESSED IT!\nNumber: ${getNumber['playerChoice']} — Drawn value: ${getNumber['computerDraw']}.\n$divider\n');
   } else {
     stdout.write(
-        '$divider\nWRONG GUESS!\nNumber: ${numbers['playerChoice']} — Drawn value: ${numbers['computerDraw']}.\n$divider\n');
+        '$divider\nWRONG GUESS!\nNumber: ${getNumber['playerChoice']} — Drawn value: ${getNumber['computerDraw']}.\n$divider\n');
   }
 }
