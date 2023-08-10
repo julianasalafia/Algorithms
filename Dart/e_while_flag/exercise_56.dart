@@ -6,14 +6,22 @@ import 'dart:io';
 
 void main() {
   int sum = 0;
-  int number = readInt('enter a number or 1111 to exit: ');
+  int number;
 
-  while (number != 1111) {
-    sum += number;
-
+  do {
     number = readInt('enter a number or 1111 to exit: ');
-  }
-  print('The sum of the entered numbers is $sum.');
+    if (number != 1111) {
+      sum = calculateSum(sum, number);
+    }
+  } while (number != 1111);
+
+  message(sum);
+}
+
+int calculateSum(int sum, int number) {
+  sum += number;
+
+  return sum;
 }
 
 int readInt(String prompt) {
@@ -30,4 +38,8 @@ int readInt(String prompt) {
   } while (value == null || value < 0);
 
   return value;
+}
+
+void message(int sum) {
+  return print('The sum of the entered numbers is $sum.');
 }
