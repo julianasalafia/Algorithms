@@ -10,31 +10,66 @@ void main() {
   double sumMenSalary = 0.0;
   double sumWomenSalary = 0.0;
 
-  stdout.write('Do you want to register [Y/N]? ');
-  String answer = stdin.readLineSync()!.toLowerCase();
+  String answer = readString('Do you want to register [Y/N]? ');
 
   while (answer == 'y') {
-    stdout.write('salary: ');
-    double salary = double.parse(stdin.readLineSync()!);
-
-    stdout.write('sex [M/F]: ');
-    String gender = stdin.readLineSync()!.toLowerCase();
+    double salary = readDouble('salary: ');
+    String gender = readString('sex [M/F]: ');
 
     if (gender == 'm') {
-      sumMenSalary += salary;
+      sumMenSalary = sumSalary(sumMenSalary, salary);
     }
 
     if (gender == 'f') {
-      sumWomenSalary += salary;
+      sumWomenSalary = sumSalary(sumWomenSalary, salary);
     }
 
-    stdout.write('do you want to register [y/n]: ');
-    answer = stdin.readLineSync()!.toLowerCase();
+    answer = readString('do you want to register [y/n]: ');
 
     if (answer == 'n') {
-      stdout.write('the sum of men\'s salaries is $sumMenSalary. \n');
-      stdout.write('the sum of women\'s salaries is $sumWomenSalary.');
-      return;
+      return message(sumMenSalary, sumWomenSalary);
+    }
+  }
+}
+
+double sumSalary(double sumSalary, double salary) {
+  sumSalary += salary;
+  return sumSalary;
+}
+
+void message(double sumMenSalary, double sumWomenSalary) {
+  stdout.write(
+      'the sum of men\'s salaries is $sumMenSalary. \nthe sum of women\'s salaries is $sumWomenSalary.');
+}
+
+String readString(String prompt) {
+  String? value;
+
+  do {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = input!;
+
+    if (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$'))) {
+      print('Error: Please enter a valid name.');
+    }
+  } while (value == null || !value.contains(RegExp(r'^[a-zA-Z\s]+$')));
+
+  return value;
+}
+
+double readDouble(String prompt) {
+  double? value;
+
+  while (true) {
+    stdout.write(prompt);
+    String? input = stdin.readLineSync();
+    value = double.tryParse(input!);
+
+    if (value != null && value >= 0) {
+      return value;
+    } else {
+      print('Error: Please enter a valid number.');
     }
   }
 }
