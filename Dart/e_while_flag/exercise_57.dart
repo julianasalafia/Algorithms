@@ -16,8 +16,7 @@ void main() {
 
   while (answer == 'y') {
     double salary = readDouble('salary: ');
-    String gender = readString('sex [M/F]: ').toLowerCase();
-    GenderStatus userGender = getGender(gender);
+    GenderStatus userGender = getGender();
 
     if (userGender == GenderStatus.MALE) {
       sumMenSalary = sumSalary(sumMenSalary, salary);
@@ -35,26 +34,23 @@ void main() {
   }
 }
 
-GenderStatus getGender(String gender) {
-  GenderStatus userGender;
+GenderStatus getGender() {
+  while (true) {
+    String gender = readString('sex [M/F]: ').toLowerCase();
 
-  switch (gender) {
-    case 'm':
-      userGender = GenderStatus.MALE;
-      break;
-    case 'f':
-      userGender = GenderStatus.FEMALE;
-      break;
-    default:
-      return GenderStatus.OTHER;
+    switch (gender) {
+      case 'm':
+        return GenderStatus.MALE;
+      case 'f':
+        return GenderStatus.FEMALE;
+      default:
+        print('Error: Please enter a valid gender (M/F).');
+    }
   }
-
-  return userGender;
 }
 
 double sumSalary(double sumSalary, double salary) {
-  sumSalary += salary;
-  return sumSalary;
+  return sumSalary += salary;
 }
 
 void message(double sumMenSalary, double sumWomenSalary) {
