@@ -6,6 +6,8 @@
 
 import 'dart:io';
 
+enum GenderStatus { MALE, FEMALE, OTHER }
+
 void main() {
   double sumMenSalary = 0.0;
   double sumWomenSalary = 0.0;
@@ -14,22 +16,40 @@ void main() {
 
   while (answer == 'y') {
     double salary = readDouble('salary: ');
-    String gender = readString('sex [M/F]: ');
+    String gender = readString('sex [M/F]: ').toLowerCase();
+    GenderStatus userGender = getGender(gender);
 
-    if (gender == 'm') {
+    if (userGender == GenderStatus.MALE) {
       sumMenSalary = sumSalary(sumMenSalary, salary);
     }
 
-    if (gender == 'f') {
+    if (userGender == GenderStatus.FEMALE) {
       sumWomenSalary = sumSalary(sumWomenSalary, salary);
     }
 
-    answer = readString('do you want to register [y/n]: ');
+    answer = readString('do you want to register [Y/N]: ').toLowerCase();
 
     if (answer == 'n') {
       return message(sumMenSalary, sumWomenSalary);
     }
   }
+}
+
+GenderStatus getGender(String gender) {
+  GenderStatus userGender;
+
+  switch (gender) {
+    case 'm':
+      userGender = GenderStatus.MALE;
+      break;
+    case 'f':
+      userGender = GenderStatus.FEMALE;
+      break;
+    default:
+      return GenderStatus.OTHER;
+  }
+
+  return userGender;
 }
 
 double sumSalary(double sumSalary, double salary) {
@@ -39,7 +59,7 @@ double sumSalary(double sumSalary, double salary) {
 
 void message(double sumMenSalary, double sumWomenSalary) {
   stdout.write(
-      'the sum of men\'s salaries is $sumMenSalary. \nthe sum of women\'s salaries is $sumWomenSalary.');
+      'the sum of men\'s salaries is \$${sumMenSalary.toStringAsFixed(2)}. \nthe sum of women\'s salaries is \$${sumWomenSalary.toStringAsFixed(2)}.');
 }
 
 String readString(String prompt) {
