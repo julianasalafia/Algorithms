@@ -7,12 +7,18 @@
 import 'dart:io';
 
 void main() {
-  int count = 0;
-  List<int> ages = [];
-  int sumAges = 0;
+  List<int> ages = registerStudents();
+  displayResults(ages);
+}
 
-  stdout.write('Do you want to register students? [Y/N]? ');
-  String answer = stdin.readLineSync()!.toLowerCase();
+String getUserInput(String prompt) {
+  stdout.write(prompt);
+  return stdin.readLineSync()!.toLowerCase();
+}
+
+List<int> registerStudents() {
+  List<int> ages = [];
+  String answer = getUserInput('Do you want to register students? [Y/N]?');
 
   while (answer == 'y') {
     stdout.write('Age: ');
@@ -22,14 +28,16 @@ void main() {
       break;
     }
 
-    sumAges += age;
     ages.add(age);
-    count++;
-
-    stdout.write('Do you want to register students? [Y/N]? ');
-    answer = stdin.readLineSync()!.toLowerCase();
+    answer = getUserInput('Do you want to register students? [Y/N]?');
   }
 
+  return ages;
+}
+
+void displayResults(List<int> ages) {
+  int sumAges = ages.fold(0, (prev, age) => prev + age);
   int averageAge = sumAges ~/ ages.length;
-  stdout.write('Number of students: $count \nAverage age: $averageAge.');
+  stdout
+      .write('Number of students: ${ages.length} \nAverage age: $averageAge.');
 }
