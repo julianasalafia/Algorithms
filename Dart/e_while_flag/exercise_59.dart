@@ -9,7 +9,7 @@ import 'dart:io';
 
 void main() {
   Map<String, dynamic> person = registerUsers();
-  print('data: $person');
+  displayResults(person);
 }
 
 String getUserInput(String prompt) {
@@ -21,7 +21,7 @@ Map<String, dynamic> registerUsers() {
   List<String> genders = [];
   List<int> ages = [];
 
-  String answer = 'y';
+  String answer = getUserInput('Do you want to register a new user [Y/N]? ');
   int? age;
 
   while (answer == 'y') {
@@ -54,4 +54,11 @@ Map<String, dynamic> registerUsers() {
     'genders': genders,
     'ages': ages,
   };
+}
+
+void displayResults(Map<String, dynamic> person) {
+  if (person['genders'].isEmpty && person['ages'].isEmpty) {
+    stdout.write('No users registered.');
+    return;
+  }
 }
