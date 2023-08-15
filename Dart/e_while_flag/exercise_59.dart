@@ -8,8 +8,8 @@
 import 'dart:io';
 
 void main() {
-  List<int> ages = registerUsers();
-  print('ages: $ages');
+  Map<String, dynamic> person = registerUsers();
+  print('data: $person');
 }
 
 String getUserInput(String prompt) {
@@ -17,20 +17,29 @@ String getUserInput(String prompt) {
   return stdin.readLineSync()!.toLowerCase();
 }
 
-List<int> registerUsers() {
+Map<String, dynamic> registerUsers() {
+  List<String> genders = [];
   List<int> ages = [];
+
   String answer = 'y';
+  int age;
 
   while (answer == 'y') {
-    stdout.write('age: ');
+    stdout.write('gender: ');
     String? input = stdin.readLineSync();
 
-    int age;
+    genders.add(input!);
+
+    stdout.write('age: ');
+    input = stdin.readLineSync();
 
     age = int.parse(input!);
     ages.add(age);
     answer = getUserInput('Do you want to register someone? [Y/N]? ');
   }
 
-  return ages;
+  return {
+    'genders': genders,
+    'ages': ages,
+  };
 }
