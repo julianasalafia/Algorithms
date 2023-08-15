@@ -22,14 +22,14 @@ Map<String, dynamic> registerUsers() {
   List<int> ages = [];
 
   String answer = 'y';
-  int age;
+  int? age;
 
   while (answer == 'y') {
     stdout.write('gender [M/F]: ');
     String input = stdin.readLineSync()!.toUpperCase();
 
     while (input != 'M' && input != 'F') {
-      stdout.write('Invalid input. Please try again: ');
+      stdout.write('Invalid input. Gender [M/F]: ');
       input = stdin.readLineSync()!.toUpperCase();
     }
 
@@ -38,9 +38,16 @@ Map<String, dynamic> registerUsers() {
     stdout.write('age: ');
     input = stdin.readLineSync()!;
 
-    age = int.parse(input);
+    age = int.tryParse(input);
+
+    while (age == null || age < 0) {
+      stdout.write('Invalid age. Age: ');
+      input = stdin.readLineSync()!;
+      age = int.tryParse(input);
+    }
+
     ages.add(age);
-    answer = getUserInput('Do you want to register someone? [Y/N]? ');
+    answer = getUserInput('Do you want to register a new user [Y/N]? ');
   }
 
   return {
