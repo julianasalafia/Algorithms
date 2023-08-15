@@ -25,15 +25,20 @@ Map<String, dynamic> registerUsers() {
   int age;
 
   while (answer == 'y') {
-    stdout.write('gender: ');
-    String? input = stdin.readLineSync();
+    stdout.write('gender [M/F]: ');
+    String input = stdin.readLineSync()!.toUpperCase();
 
-    genders.add(input!);
+    while (input != 'M' && input != 'F') {
+      stdout.write('Invalid input. Please try again: ');
+      input = stdin.readLineSync()!.toUpperCase();
+    }
+
+    genders.add(input);
 
     stdout.write('age: ');
-    input = stdin.readLineSync();
+    input = stdin.readLineSync()!;
 
-    age = int.parse(input!);
+    age = int.parse(input);
     ages.add(age);
     answer = getUserInput('Do you want to register someone? [Y/N]? ');
   }
