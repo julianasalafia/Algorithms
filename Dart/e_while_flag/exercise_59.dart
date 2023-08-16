@@ -20,9 +20,11 @@ String getUserInput(String prompt) {
 Map<String, dynamic> registerUsers() {
   List<String> genders = [];
   List<int> ages = [];
+  int highestAge = 0;
 
   String answer = getUserInput('Do you want to register a new user [Y/N]? ');
   int? age;
+  int registeredMen = 0;
 
   while (answer == 'y') {
     stdout.write('gender [M/F]: ');
@@ -31,6 +33,10 @@ Map<String, dynamic> registerUsers() {
     while (input != 'M' && input != 'F') {
       stdout.write('Invalid input. Gender [M/F]: ');
       input = stdin.readLineSync()!.toUpperCase();
+    }
+
+    if (input == 'M') {
+      registeredMen++;
     }
 
     genders.add(input);
@@ -47,12 +53,19 @@ Map<String, dynamic> registerUsers() {
     }
 
     ages.add(age);
+
+    if (age > highestAge) {
+      highestAge = age;
+    }
+
     answer = getUserInput('Do you want to register a new user [Y/N]? ');
   }
 
   return {
     'genders': genders,
     'ages': ages,
+    'highestAge': highestAge,
+    'registeredMen': registeredMen
   };
 }
 
@@ -61,4 +74,7 @@ void displayResults(Map<String, dynamic> person) {
     stdout.write('No users registered.');
     return;
   }
+
+  stdout.write(
+      'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \n ');
 }
