@@ -20,6 +20,7 @@ String getUserInput(String prompt) {
 Map<String, dynamic> registerUsers() {
   List<String> genders = [];
   List<int> ages = [];
+  int agesMen = 0;
   int highestAge = 0;
 
   String answer = getUserInput('Do you want to register a new user [Y/N]? ');
@@ -28,34 +29,32 @@ Map<String, dynamic> registerUsers() {
 
   while (answer == 'y') {
     stdout.write('gender [M/F]: ');
-    String input = stdin.readLineSync()!.toUpperCase();
+    String gender = stdin.readLineSync()!.toUpperCase();
 
-    while (input != 'M' && input != 'F') {
+    while (gender != 'M' && gender != 'F') {
       stdout.write('Invalid input. Gender [M/F]: ');
-      input = stdin.readLineSync()!.toUpperCase();
+      gender = stdin.readLineSync()!.toUpperCase();
     }
 
-    if (input == 'M') {
-      registeredMen++;
-    }
-
-    genders.add(input);
+    genders.add(gender);
 
     stdout.write('age: ');
-    input = stdin.readLineSync()!;
-
-    age = int.tryParse(input);
+    age = int.tryParse(stdin.readLineSync()!);
 
     while (age == null || age < 0) {
       stdout.write('Invalid age. Age: ');
-      input = stdin.readLineSync()!;
-      age = int.tryParse(input);
+      age = int.tryParse(stdin.readLineSync()!);
     }
 
     ages.add(age);
 
     if (age > highestAge) {
       highestAge = age;
+    }
+
+    if (gender == 'M') {
+      registeredMen++;
+      agesMen += age;
     }
 
     answer = getUserInput('Do you want to register a new user [Y/N]? ');
@@ -65,7 +64,8 @@ Map<String, dynamic> registerUsers() {
     'genders': genders,
     'ages': ages,
     'highestAge': highestAge,
-    'registeredMen': registeredMen
+    'registeredMen': registeredMen,
+    'agesMen': agesMen
   };
 }
 
@@ -75,6 +75,8 @@ void displayResults(Map<String, dynamic> person) {
     return;
   }
 
+  int averageMale = person['agesMen'] ~/ person['registeredMen'];
+
   stdout.write(
-      'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \n ');
+      'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \nThe average age of men is $averageMale.');
 }
