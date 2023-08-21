@@ -17,6 +17,24 @@ String getUserInput(String prompt) {
   return stdin.readLineSync()!.toLowerCase();
 }
 
+String validateGenderInput() {
+  String gender;
+  do {
+    stdout.write('gender [M/F]: ');
+    gender = stdin.readLineSync()!.toUpperCase();
+  } while (gender != 'M' && gender != 'F');
+  return gender;
+}
+
+int validateAgeInput() {
+  int? age;
+  do {
+    stdout.write('age: ');
+    age = int.tryParse(stdin.readLineSync()!);
+  } while (age == null || age < 0);
+  return age;
+}
+
 Map<String, dynamic> registerUsers() {
   List<String> genders = [];
   List<int> ages = [];
@@ -24,29 +42,12 @@ Map<String, dynamic> registerUsers() {
   int highestAge = 0;
   int youngestWomanAge = 100;
 
-  String answer = getUserInput('Do you want to register a new user [Y/N]? ');
-  int? age;
-  int registeredMen = 0;
-
-  while (answer == 'y') {
-    stdout.write('gender [M/F]: ');
-    String gender = stdin.readLineSync()!.toUpperCase();
-
-    while (gender != 'M' && gender != 'F') {
-      stdout.write('Invalid input. Gender [M/F]: ');
-      gender = stdin.readLineSync()!.toUpperCase();
-    }
+  String answer;
+  do {
+    String gender = validateGenderInput();
+    int age = validateAgeInput();
 
     genders.add(gender);
-
-    stdout.write('age: ');
-    age = int.tryParse(stdin.readLineSync()!);
-
-    while (age == null || age < 0) {
-      stdout.write('Invalid age. Age: ');
-      age = int.tryParse(stdin.readLineSync()!);
-    }
-
     ages.add(age);
 
     if (age > highestAge) {
@@ -54,14 +55,15 @@ Map<String, dynamic> registerUsers() {
     }
 
     if (gender == 'M') {
-      registeredMen++;
       agesMen += age;
     } else if (gender == 'F' && age < youngestWomanAge) {
       youngestWomanAge = age;
     }
 
     answer = getUserInput('Do you want to register a new user [Y/N]? ');
-  }
+  } while (answer == 'y');
+
+  int registeredMen = genders.where((gender) => gender == 'M').length;
 
   return {
     'genders': genders,
@@ -79,7 +81,9 @@ void displayResults(Map<String, dynamic> person) {
     return;
   }
 
-  int averageMale = person['agesMen'] ~/ person['registeredMen'];
+  int averageMale = person['registeredMen'] == 0
+      ? 0
+      : person['agesMen'] ~/ person['registeredMen'];
 
   stdout.write(
       'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \nThe average age of men is $averageMale.\nThe age of the youngest woman is ${person['youngestWomanAge']}.');
