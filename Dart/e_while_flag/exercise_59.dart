@@ -22,6 +22,7 @@ Map<String, dynamic> registerUsers() {
   List<int> ages = [];
   int agesMen = 0;
   int highestAge = 0;
+  int youngestWomanAge = 100;
 
   String answer = getUserInput('Do you want to register a new user [Y/N]? ');
   int? age;
@@ -55,6 +56,8 @@ Map<String, dynamic> registerUsers() {
     if (gender == 'M') {
       registeredMen++;
       agesMen += age;
+    } else if (gender == 'F' && age < youngestWomanAge) {
+      youngestWomanAge = age;
     }
 
     answer = getUserInput('Do you want to register a new user [Y/N]? ');
@@ -65,7 +68,8 @@ Map<String, dynamic> registerUsers() {
     'ages': ages,
     'highestAge': highestAge,
     'registeredMen': registeredMen,
-    'agesMen': agesMen
+    'agesMen': agesMen,
+    'youngestWomanAge': youngestWomanAge
   };
 }
 
@@ -78,5 +82,5 @@ void displayResults(Map<String, dynamic> person) {
   int averageMale = person['agesMen'] ~/ person['registeredMen'];
 
   stdout.write(
-      'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \nThe average age of men is $averageMale.');
+      'The highest age read was ${person['highestAge']}. \nThere are ${person['registeredMen']} men registered. \nThe average age of men is $averageMale.\nThe age of the youngest woman is ${person['youngestWomanAge']}.');
 }
