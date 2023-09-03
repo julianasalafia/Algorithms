@@ -10,5 +10,7 @@ fun main() {
     val salary = readln().toDouble()
     val _salary = String.format("%.2f", salary)
 
-    println("The employee $employeeName has a salary of U$$_salary.")
+    employeeName?.let {
+        println("The employee $employeeName has a salary of U$$_salary.")
+    } ?: print("No employee name provided.")
 }
